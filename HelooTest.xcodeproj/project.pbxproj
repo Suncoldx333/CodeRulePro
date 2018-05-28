@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D263DD420B2CFF500BCA719 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D263DD320B2CFF500BCA719 /* AppDelegate.m */; };
+		1D263DD720B2CFF500BCA719 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D263DD620B2CFF500BCA719 /* ViewController.m */; };
+		1D263DDA20B2CFF500BCA719 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D263DD820B2CFF500BCA719 /* Main.storyboard */; };
+		1D263DDC20B2CFF600BCA719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D263DDB20B2CFF600BCA719 /* Assets.xcassets */; };
+		1D263DDF20B2CFF600BCA719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D263DDD20B2CFF600BCA719 /* LaunchScreen.storyboard */; };
+		1D263DE220B2CFF600BCA719 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D263DE120B2CFF600BCA719 /* main.m */; };
+		1D263DEB20B2D01D00BCA719 /* OriginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D263DEA20B2D01D00BCA719 /* OriginModel.m */; };
+		1DFC77AC20BB9BF600F356F1 /* HowSwitchWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC77AB20BB9BF600F356F1 /* HowSwitchWork.m */; };
+		1DFC77AE20BB9C2B00F356F1 /* HelloSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC77AD20BB9C2B00F356F1 /* HelloSwitch.m */; };
+		1DFD147B20B5580400646678 /* ObserverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD147A20B5580400646678 /* ObserverModel.m */; };
+		1DFD147F20B693FB00646678 /* Emperor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD147E20B693FB00646678 /* Emperor.m */; };
+		1DFD148320B694BA00646678 /* Tribe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD148220B694BA00646678 /* Tribe.m */; };
+		1DFEDEDB20B3B0EC00E06130 /* NSArray+CustomMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFEDEDA20B3B0EC00E06130 /* NSArray+CustomMethod.m */; };
+		1DFEDEDE20B3B1C400E06130 /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFEDEDD20B3B1C400E06130 /* Device.m */; };
+		1DFEDEE120B3B1FB00E06130 /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFEDEE020B3B1FB00E06130 /* Module.m */; };
+		1DFEDEE420B3B22D00E06130 /* Family.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFEDEE320B3B22D00E06130 /* Family.m */; };
+		1DFEDEEA20B3E95D00E06130 /* firstSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFEDEE920B3E95D00E06130 /* firstSubVC.m */; };
+		1DFEDEED20B3E96B00E06130 /* SecondSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFEDEEC20B3E96B00E06130 /* SecondSubViewController.m */; };
+		D30EC9B4D24AFDFEDF8B1D80 /* libPods-HelooTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EDE93281AB9986809BD85C /* libPods-HelooTest.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1612195B084651AE4AB9DE35 /* Pods-HelooTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelooTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelooTest/Pods-HelooTest.debug.xcconfig"; sourceTree = "<group>"; };
+		1D263DCF20B2CFF500BCA719 /* HelooTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelooTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D263DD220B2CFF500BCA719 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1D263DD320B2CFF500BCA719 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1D263DD520B2CFF500BCA719 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1D263DD620B2CFF500BCA719 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1D263DD920B2CFF500BCA719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D263DDB20B2CFF600BCA719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D263DDE20B2CFF600BCA719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D263DE020B2CFF600BCA719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D263DE120B2CFF600BCA719 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1D263DE920B2D01D00BCA719 /* OriginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OriginModel.h; sourceTree = "<group>"; };
+		1D263DEA20B2D01D00BCA719 /* OriginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OriginModel.m; sourceTree = "<group>"; };
+		1DFC77AA20BB9BF600F356F1 /* HowSwitchWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HowSwitchWork.h; sourceTree = "<group>"; };
+		1DFC77AB20BB9BF600F356F1 /* HowSwitchWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HowSwitchWork.m; sourceTree = "<group>"; };
+		1DFC77AD20BB9C2B00F356F1 /* HelloSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloSwitch.m; sourceTree = "<group>"; };
+		1DFD147920B5580400646678 /* ObserverModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObserverModel.h; sourceTree = "<group>"; };
+		1DFD147A20B5580400646678 /* ObserverModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObserverModel.m; sourceTree = "<group>"; };
+		1DFD147D20B693FB00646678 /* Emperor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Emperor.h; sourceTree = "<group>"; };
+		1DFD147E20B693FB00646678 /* Emperor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Emperor.m; sourceTree = "<group>"; };
+		1DFD148120B694BA00646678 /* Tribe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tribe.h; sourceTree = "<group>"; };
+		1DFD148220B694BA00646678 /* Tribe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tribe.m; sourceTree = "<group>"; };
+		1DFEDED920B3B0EC00E06130 /* NSArray+CustomMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+CustomMethod.h"; sourceTree = "<group>"; };
+		1DFEDEDA20B3B0EC00E06130 /* NSArray+CustomMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CustomMethod.m"; sourceTree = "<group>"; };
+		1DFEDEDC20B3B1C400E06130 /* Device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		1DFEDEDD20B3B1C400E06130 /* Device.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
+		1DFEDEDF20B3B1FB00E06130 /* Module.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
+		1DFEDEE020B3B1FB00E06130 /* Module.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
+		1DFEDEE220B3B22D00E06130 /* Family.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Family.h; sourceTree = "<group>"; };
+		1DFEDEE320B3B22D00E06130 /* Family.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Family.m; sourceTree = "<group>"; };
+		1DFEDEE620B3B28100E06130 /* DevicesIdImports.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DevicesIdImports.h; sourceTree = "<group>"; };
+		1DFEDEE820B3E95D00E06130 /* firstSubVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = firstSubVC.h; sourceTree = "<group>"; };
+		1DFEDEE920B3E95D00E06130 /* firstSubVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = firstSubVC.m; sourceTree = "<group>"; };
+		1DFEDEEB20B3E96B00E06130 /* SecondSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondSubViewController.h; sourceTree = "<group>"; };
+		1DFEDEEC20B3E96B00E06130 /* SecondSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondSubViewController.m; sourceTree = "<group>"; };
+		20EDE93281AB9986809BD85C /* libPods-HelooTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelooTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92BA0D3AF4D5C225CECBDD2A /* Pods-HelooTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelooTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelooTest/Pods-HelooTest.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D263DCC20B2CFF500BCA719 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D30EC9B4D24AFDFEDF8B1D80 /* libPods-HelooTest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D263DC620B2CFF500BCA719 = {
+			isa = PBXGroup;
+			children = (
+				1D263DD120B2CFF500BCA719 /* HelooTest */,
+				1D263DD020B2CFF500BCA719 /* Products */,
+				BC866308B744A1DF0F142489 /* Pods */,
+				BBBFFE6A076B410C2B40BBE6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1D263DD020B2CFF500BCA719 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D263DCF20B2CFF500BCA719 /* HelooTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D263DD120B2CFF500BCA719 /* HelooTest */ = {
+			isa = PBXGroup;
+			children = (
+				1DFEDEE520B3B26400E06130 /* ImportFiles */,
+				1DFEDED820B3B0BC00E06130 /* Category */,
+				1D263DE820B2D00B00BCA719 /* Model */,
+				1D263DD220B2CFF500BCA719 /* AppDelegate.h */,
+				1D263DD320B2CFF500BCA719 /* AppDelegate.m */,
+				1D263DD520B2CFF500BCA719 /* ViewController.h */,
+				1D263DD620B2CFF500BCA719 /* ViewController.m */,
+				1DFD147720B502F400646678 /* VCS */,
+				1D263DD820B2CFF500BCA719 /* Main.storyboard */,
+				1D263DDB20B2CFF600BCA719 /* Assets.xcassets */,
+				1D263DDD20B2CFF600BCA719 /* LaunchScreen.storyboard */,
+				1D263DE020B2CFF600BCA719 /* Info.plist */,
+				1D263DE120B2CFF600BCA719 /* main.m */,
+			);
+			path = HelooTest;
+			sourceTree = "<group>";
+		};
+		1D263DE820B2D00B00BCA719 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DFD147C20B693A600646678 /* StoryBgModel */,
+				1D263DE920B2D01D00BCA719 /* OriginModel.h */,
+				1D263DEA20B2D01D00BCA719 /* OriginModel.m */,
+				1DFEDEDC20B3B1C400E06130 /* Device.h */,
+				1DFEDEDD20B3B1C400E06130 /* Device.m */,
+				1DFEDEDF20B3B1FB00E06130 /* Module.h */,
+				1DFEDEE020B3B1FB00E06130 /* Module.m */,
+				1DFEDEE220B3B22D00E06130 /* Family.h */,
+				1DFEDEE320B3B22D00E06130 /* Family.m */,
+				1DFD147920B5580400646678 /* ObserverModel.h */,
+				1DFD147A20B5580400646678 /* ObserverModel.m */,
+				1DFC77AA20BB9BF600F356F1 /* HowSwitchWork.h */,
+				1DFC77AB20BB9BF600F356F1 /* HowSwitchWork.m */,
+				1DFC77AD20BB9C2B00F356F1 /* HelloSwitch.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DFD147520B502E500646678 /* Dirst */ = {
+			isa = PBXGroup;
+			children = (
+				1DFEDEE820B3E95D00E06130 /* firstSubVC.h */,
+				1DFEDEE920B3E95D00E06130 /* firstSubVC.m */,
+			);
+			path = Dirst;
+			sourceTree = "<group>";
+		};
+		1DFD147620B502ED00646678 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				1DFEDEEB20B3E96B00E06130 /* SecondSubViewController.h */,
+				1DFEDEEC20B3E96B00E06130 /* SecondSubViewController.m */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		1DFD147720B502F400646678 /* VCS */ = {
+			isa = PBXGroup;
+			children = (
+				1DFD147520B502E500646678 /* Dirst */,
+				1DFD147620B502ED00646678 /* Second */,
+			);
+			path = VCS;
+			sourceTree = "<group>";
+		};
+		1DFD147C20B693A600646678 /* StoryBgModel */ = {
+			isa = PBXGroup;
+			children = (
+				1DFD148020B6945D00646678 /* Camp */,
+			);
+			path = StoryBgModel;
+			sourceTree = "<group>";
+		};
+		1DFD148020B6945D00646678 /* Camp */ = {
+			isa = PBXGroup;
+			children = (
+				1DFD147D20B693FB00646678 /* Emperor.h */,
+				1DFD147E20B693FB00646678 /* Emperor.m */,
+				1DFD148120B694BA00646678 /* Tribe.h */,
+				1DFD148220B694BA00646678 /* Tribe.m */,
+			);
+			path = Camp;
+			sourceTree = "<group>";
+		};
+		1DFEDED820B3B0BC00E06130 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1DFEDED920B3B0EC00E06130 /* NSArray+CustomMethod.h */,
+				1DFEDEDA20B3B0EC00E06130 /* NSArray+CustomMethod.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		1DFEDEE520B3B26400E06130 /* ImportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1DFEDEE620B3B28100E06130 /* DevicesIdImports.h */,
+			);
+			path = ImportFiles;
+			sourceTree = "<group>";
+		};
+		BBBFFE6A076B410C2B40BBE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20EDE93281AB9986809BD85C /* libPods-HelooTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC866308B744A1DF0F142489 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1612195B084651AE4AB9DE35 /* Pods-HelooTest.debug.xcconfig */,
+				92BA0D3AF4D5C225CECBDD2A /* Pods-HelooTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D263DCE20B2CFF500BCA719 /* HelooTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D263DE520B2CFF600BCA719 /* Build configuration list for PBXNativeTarget "HelooTest" */;
+			buildPhases = (
+				5FA760651A691ABEA9DCDFF8 /* [CP] Check Pods Manifest.lock */,
+				1D263DCB20B2CFF500BCA719 /* Sources */,
+				1D263DCC20B2CFF500BCA719 /* Frameworks */,
+				1D263DCD20B2CFF500BCA719 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelooTest;
+			productName = HelooTest;
+			productReference = 1D263DCF20B2CFF500BCA719 /* HelooTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D263DC720B2CFF500BCA719 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = ZhaoyunWang;
+				TargetAttributes = {
+					1D263DCE20B2CFF500BCA719 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 1D263DCA20B2CFF500BCA719 /* Build configuration list for PBXProject "HelooTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D263DC620B2CFF500BCA719;
+			productRefGroup = 1D263DD020B2CFF500BCA719 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D263DCE20B2CFF500BCA719 /* HelooTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D263DCD20B2CFF500BCA719 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D263DDF20B2CFF600BCA719 /* LaunchScreen.storyboard in Resources */,
+				1D263DDC20B2CFF600BCA719 /* Assets.xcassets in Resources */,
+				1D263DDA20B2CFF500BCA719 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5FA760651A691ABEA9DCDFF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelooTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D263DCB20B2CFF500BCA719 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DFC77AE20BB9C2B00F356F1 /* HelloSwitch.m in Sources */,
+				1DFEDEEA20B3E95D00E06130 /* firstSubVC.m in Sources */,
+				1D263DD720B2CFF500BCA719 /* ViewController.m in Sources */,
+				1D263DEB20B2D01D00BCA719 /* OriginModel.m in Sources */,
+				1DFEDEDB20B3B0EC00E06130 /* NSArray+CustomMethod.m in Sources */,
+				1DFD147B20B5580400646678 /* ObserverModel.m in Sources */,
+				1DFEDEE120B3B1FB00E06130 /* Module.m in Sources */,
+				1DFD147F20B693FB00646678 /* Emperor.m in Sources */,
+				1DFEDEED20B3E96B00E06130 /* SecondSubViewController.m in Sources */,
+				1DFEDEDE20B3B1C400E06130 /* Device.m in Sources */,
+				1DFEDEE420B3B22D00E06130 /* Family.m in Sources */,
+				1D263DE220B2CFF600BCA719 /* main.m in Sources */,
+				1DFD148320B694BA00646678 /* Tribe.m in Sources */,
+				1D263DD420B2CFF500BCA719 /* AppDelegate.m in Sources */,
+				1DFC77AC20BB9BF600F356F1 /* HowSwitchWork.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1D263DD820B2CFF500BCA719 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D263DD920B2CFF500BCA719 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1D263DDD20B2CFF600BCA719 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D263DDE20B2CFF600BCA719 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D263DE320B2CFF600BCA719 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1D263DE420B2CFF600BCA719 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D263DE620B2CFF600BCA719 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1612195B084651AE4AB9DE35 /* Pods-HelooTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5YQ85Q9UV8;
+				INFOPLIST_FILE = HelooTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = asdadad.HelooTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D263DE720B2CFF600BCA719 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92BA0D3AF4D5C225CECBDD2A /* Pods-HelooTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5YQ85Q9UV8;
+				INFOPLIST_FILE = HelooTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = asdadad.HelooTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D263DCA20B2CFF500BCA719 /* Build configuration list for PBXProject "HelooTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D263DE320B2CFF600BCA719 /* Debug */,
+				1D263DE420B2CFF600BCA719 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D263DE520B2CFF600BCA719 /* Build configuration list for PBXNativeTarget "HelooTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D263DE620B2CFF600BCA719 /* Debug */,
+				1D263DE720B2CFF600BCA719 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D263DC720B2CFF500BCA719 /* Project object */;
+}
