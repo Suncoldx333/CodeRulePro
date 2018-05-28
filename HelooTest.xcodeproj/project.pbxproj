@@ -16,6 +16,7 @@
 		1D263DEB20B2D01D00BCA719 /* OriginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D263DEA20B2D01D00BCA719 /* OriginModel.m */; };
 		1DFC77AC20BB9BF600F356F1 /* HowSwitchWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC77AB20BB9BF600F356F1 /* HowSwitchWork.m */; };
 		1DFC77AE20BB9C2B00F356F1 /* HelloSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC77AD20BB9C2B00F356F1 /* HelloSwitch.m */; };
+		1DFC77BA20BBCE2E00F356F1 /* CRTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC77B920BBCE2E00F356F1 /* CRTestViewController.m */; };
 		1DFD147B20B5580400646678 /* ObserverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD147A20B5580400646678 /* ObserverModel.m */; };
 		1DFD147F20B693FB00646678 /* Emperor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD147E20B693FB00646678 /* Emperor.m */; };
 		1DFD148320B694BA00646678 /* Tribe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD148220B694BA00646678 /* Tribe.m */; };
@@ -45,6 +46,8 @@
 		1DFC77AA20BB9BF600F356F1 /* HowSwitchWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HowSwitchWork.h; sourceTree = "<group>"; };
 		1DFC77AB20BB9BF600F356F1 /* HowSwitchWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HowSwitchWork.m; sourceTree = "<group>"; };
 		1DFC77AD20BB9C2B00F356F1 /* HelloSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloSwitch.m; sourceTree = "<group>"; };
+		1DFC77B820BBCE2E00F356F1 /* CRTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRTestViewController.h; sourceTree = "<group>"; };
+		1DFC77B920BBCE2E00F356F1 /* CRTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRTestViewController.m; sourceTree = "<group>"; };
 		1DFD147920B5580400646678 /* ObserverModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObserverModel.h; sourceTree = "<group>"; };
 		1DFD147A20B5580400646678 /* ObserverModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObserverModel.m; sourceTree = "<group>"; };
 		1DFD147D20B693FB00646678 /* Emperor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Emperor.h; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 			children = (
 				1DFD147520B502E500646678 /* Dirst */,
 				1DFD147620B502ED00646678 /* Second */,
+				1DFC77B820BBCE2E00F356F1 /* CRTestViewController.h */,
+				1DFC77B920BBCE2E00F356F1 /* CRTestViewController.m */,
 			);
 			path = VCS;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 				1D263DD720B2CFF500BCA719 /* ViewController.m in Sources */,
 				1D263DEB20B2D01D00BCA719 /* OriginModel.m in Sources */,
 				1DFEDEDB20B3B0EC00E06130 /* NSArray+CustomMethod.m in Sources */,
+				1DFC77BA20BBCE2E00F356F1 /* CRTestViewController.m in Sources */,
 				1DFD147B20B5580400646678 /* ObserverModel.m in Sources */,
 				1DFEDEE120B3B1FB00E06130 /* Module.m in Sources */,
 				1DFD147F20B693FB00646678 /* Emperor.m in Sources */,
