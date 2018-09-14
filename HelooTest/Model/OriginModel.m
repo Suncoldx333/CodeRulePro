@@ -28,4 +28,10 @@
     self.helloBool = NO;
 }
 
+- (void)oriMehtod {
+    
+    NSLog(@"oriMethod");
+    
+}
+
 @end

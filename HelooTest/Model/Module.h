@@ -10,6 +10,8 @@
 
 @interface Module : NSObject
 
-@property (nonatomic,copy) NSString *deviceId;
+@property (nonatomic, copy, readonly) NSString *deviceId;
+
+-(void)changeReadOnly;
 
 @end

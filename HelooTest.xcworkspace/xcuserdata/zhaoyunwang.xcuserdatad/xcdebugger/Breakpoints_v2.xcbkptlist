@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HelooTest/ViewController.m"
-            timestampString = "549167368.315678"
+            filePath = "HelooTest/VCS/CRTestViewController.m"
+            timestampString = "558006456.4785531"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "-mayIReturn"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "-layoutSubviews"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HelooTest/ViewController.m"
-            timestampString = "549167368.31598"
+            filePath = "HelooTest/VCS/LoadingAnimationVC.m"
+            timestampString = "558588716.2653691"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "-tapEvent"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HelooTest/ViewController.m"
-            timestampString = "549167377.007241"
+            filePath = "HelooTest/VCS/Second/HowViewCreatedVC.m"
+            timestampString = "558601529.196349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "-tapEvent"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-init"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

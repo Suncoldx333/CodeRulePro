@@ -20,6 +20,7 @@
     // Override point for customization after application launch.
     ViewController *vc = [[ViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    nav.navigationBar.translucent = NO;;
     self.window.rootViewController = nav;
     
     return YES;

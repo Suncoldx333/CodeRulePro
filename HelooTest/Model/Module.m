@@ -10,4 +10,17 @@
 
 @implementation Module
 
+//@synthesize deviceId = _innerId;
+
+-(id)init{
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
+
+-(void)changeReadOnly {
+    _deviceId = @"sad";
+}
+
 @end

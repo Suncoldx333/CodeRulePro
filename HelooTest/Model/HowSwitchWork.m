@@ -10,6 +10,15 @@
 
 @implementation HowSwitchWork
 
+@synthesize itemId = _itemId;
 
+- (instancetype)init {
+    
+    if (self = [super init]) {
+        self.itemId = @"sss";
+    }
+    return self;
+    
+}
 
 @end

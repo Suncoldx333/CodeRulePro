@@ -7,6 +7,7 @@
 //
 
 #import "firstSubVC.h"
+#import "ModelHeaders.h"
 
 @interface firstSubVC ()
 
@@ -27,11 +28,16 @@
 - (void)initUI {
     self.view.backgroundColor = [UIColor whiteColor];
     
+    UIView *sub = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    sub.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:sub];
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeVC)];
     [self.view addGestureRecognizer:tap];
 }
 
 - (void)changeVC {
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"BL_Region_Set_Finished" object:nil userInfo:nil];
 }
 

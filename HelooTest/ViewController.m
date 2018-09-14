@@ -7,22 +7,66 @@
 //
 
 #import "ViewController.h"
+
+#import "SubVCsHeader.h"
+
+
+
 #import "OriginModel.h"
 #import "ObserverModel.h"
+#import "ModelIm.h"
 
 #import "DevicesIdImports.h"
 #import "NSArray+CustomMethod.h"
 
-#import <ReactiveObjC.h>
-#import "firstSubVC.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 #import <objc/runtime.h>
+#import <Toast.h>
+
+#import "NextViewController.h"
+
+#import "ModelNewChange.h"
+#import "ModeChange.h"
+#import "UILabel+testCat.h"
+
+#import <HMSegmentedControl/HMSegmentedControl.h>
+#import <lottie-ios/Lottie/Lottie.h>
+
+#import <AFNetworking/AFNetworking.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import "CustomizeProcessView.h"
+
+
+#define createErrorWithDes(m) [NSError errorWithDomain:@"" code:4 userInfo:@{NSLocalizedDescriptionKey:m}]
+#define getRectNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
+
+#define GetURLWith(tag) \
+({ \
+    NSString *inputId = [NSString stringWithFormat:@"input = %ld",(long)tag]; \
+    (inputId);\
+})\
+
+#define navHeight \
+({ \
+    CGRect statusRect = [[UIApplication sharedApplication] statusBarFrame]; \
+    CGRect navRect = self.navigationController.navigationBar.frame; \
+    CGFloat height = statusRect.size.height + navRect.size.height;  \
+    (height);\
+})\
+
+typedef void(^testBlock)(NSNumber *);
 
 @interface ViewController ()
 
+
+@property (nonatomic, strong) LOTAnimationView *lottieView;
 @property (nonatomic,strong) ObserverModel *model;
 @property (nonatomic,strong) RACSignal *sign1;
 @property (nonatomic,strong) RACCommand *command;
-
+@property (nonatomic, strong) Family *sssmodel;
+@property (nonatomic, strong) ModelNewChange *testModel;
+@property (nonatomic, strong) HMSegmentedControl *segmentedControl;
 @end
 
 @implementation ViewController{
@@ -32,10 +76,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initUI];
-    [self initData];
-    [self bindViewModel];
+    
+    self.lottieView = [LOTAnimationView animationNamed:@"LottieLogo1"];
+    self.lottieView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight * 0.3);
+    self.lottieView.contentMode = UIViewContentModeScaleAspectFill;
+    [self.view addSubview:self.lottieView];
+    
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+//    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -46,21 +101,60 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapEvent)];
     [self.view addGestureRecognizer:tap];
+    
+//    [self.view addSubview:self.segmentedControl];
+    
+}
+
+- (HMSegmentedControl *)segmentedControl {
+    
+    if (!_segmentedControl) {
+        _segmentedControl = [[HMSegmentedControl alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 45)];
+        _segmentedControl.sectionTitles = @[NSLocalizedString(@"str_邮箱", nil), NSLocalizedString(@"str_手机", nil)];
+        _segmentedControl.backgroundColor = [UIColor whiteColor];
+        _segmentedControl.selectedTitleTextAttributes = @{NSForegroundColorAttributeName:[UIColor blackColor]};
+        _segmentedControl.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor lightGrayColor]};
+        _segmentedControl.selectionIndicatorColor = [UIColor blackColor];
+        CGFloat inset = ScreenWidth / 4 - 20;
+        _segmentedControl.selectionIndicatorEdgeInsets = UIEdgeInsetsMake(0, -inset, 0, inset);
+        _segmentedControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
+        _segmentedControl.selectionIndicatorHeight = 2;
+        _segmentedControl.selectionStyle = HMSegmentedControlSelectionStyleFullWidthStripe;
+    }
+    return _segmentedControl;
+}
+
+- (NSMutableAttributedString *)signUpAttribute {
+    
+    NSString *title = @"Sign up";
+    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:title];
+    
+    NSDictionary *underLine = @{NSUnderlineStyleAttributeName : [NSNumber numberWithInt:NSUnderlineStyleSingle]};
+    [attr addAttributes:underLine range:NSMakeRange(0, title.length - 1)];
+    
+    return attr;
+}
+
+- (CGPoint)getCenter:(UIView *)view {
+    
+    CGFloat x = view.bounds.size.width / 2;
+    CGFloat y = view.bounds.size.height / 2;
+    return CGPointMake(x, y);
+    
 }
 
 - (void)initData {
     
     self.model = [[ObserverModel alloc] init];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mayIReturn) name:@"BL_Region_Set_Finished" object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mayIReturn) name:@"BL_Region_Set_Finished" object:nil];
 
 }
 
 - (void)bindViewModel {
-    
+    /*
     RACSignal *sig1 = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         [subscriber sendError:[NSError errorWithDomain:@"" code:4 userInfo:@{NSLocalizedDescriptionKey:@"nooooo"}]];
-//        [subscriber sendNext:@1];
-//        [subscriber sendCompleted];
+
         return nil;
     }];
 
@@ -75,63 +169,88 @@
     } error:^(NSError * _Nullable error) {
         NSLog(@"mes = %@",error.localizedDescription);
     }];
+    */
+    self.testModel = [[ModelNewChange alloc] init];
 
+    [[RACObserve(self.testModel, fid2) deliverOnMainThread] subscribeNext:^(id x) {
+        
+        NSLog(@"fid2_1 = %@",x);
+    }];
+    
 }
 
 - (void)tapEvent {
     
-    [[[[self makeFirstSignal]
-       doNext:^(id  _Nullable x) {
-           NSLog(@"first = %@",x);
-       }] flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
-           NSNumber *deliver = [value isKindOfClass:[NSNumber class]] ? (NSNumber *)value : [NSNumber numberWithInt:0];
-           return [[self deliverSecondSignal:deliver] map:^id _Nullable(id  _Nullable value) {
-               return @"blalala";
-           }];
-       }] subscribeNext:^(id  _Nullable x) {
-           NSLog(@"x = %@",x);
-       } error:^(NSError * _Nullable error) {
-           NSLog(@"mes = %@",error.localizedDescription);
-       }];
+    HowViewCreatedVC *vc = [[HowViewCreatedVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+- (void)method {
     
-    
-    NSMutableArray *list = [[NSMutableArray alloc] init];
-    for (int i = 1; i < 13; i++) {
-        [list addObject:[NSString stringWithFormat:@"%02d",i]];
-    }
-    NSLog(@"%@",list);
+    NSLog(@"method");
     
 }
 
-- (void)mayIReturn {
+- (NSString *)helloBlock {
     
-    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
-    [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-    NSString *numberAsString = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:0.8]];
+    dispatch_semaphore_t sem = dispatch_semaphore_create(0);
+    __block NSString *strrr = @"";
     
-//    [self.navigationController popViewControllerAnimated:YES];
-//    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"BL_Region_Set_Finished" object:nil];
+    [self createNumber:^(NSNumber *num) {
+
+        NSString *numStr = [NSString stringWithFormat:@"%@",num];
+        strrr = numStr;
+        dispatch_semaphore_signal(sem);
+
+        
+    }];
+    dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
+    return strrr;
 }
 
-- (RACSignal *)makeFirstSignal {
+- (void)createNumber:(testBlock)block {
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        NSNumber *num = [NSNumber numberWithInt:99];
+        
+        block(num);
+    });
+    
+    
+}
+
+- (RACSignal *)deliverSecondSignal:(NSNumber *)firstNumber {
     
     RACSignal *sig = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-//        [subscriber sendError:[NSError errorWithDomain:@"" code:4 userInfo:@{NSLocalizedDescriptionKey:@"here is first error"}]];
-        [subscriber sendNext:@1];
+        [subscriber sendNext:[NSNumber numberWithInt:firstNumber.intValue + 9]];
+        return nil;
+    }];
+    return sig;
+    
+}
+
+- (RACSignal *)firstSigTap {
+    
+    RACSignal *sig = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [subscriber sendNext:@19];
         [subscriber sendCompleted];
         return nil;
     }];
     return sig;
 }
 
-- (RACSignal *)deliverSecondSignal:(NSNumber *)firstNumber {
+- (RACSignal *)secondSigTap:(NSNumber *)firstInput {
+    
     
     RACSignal *sig = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        [subscriber sendError:[NSError errorWithDomain:@"" code:4 userInfo:@{NSLocalizedDescriptionKey:@"here is second error"}]];
+        NSString *second = [NSString stringWithFormat:@"will send %@",firstInput];
+        [subscriber sendNext:second];
         return nil;
     }];
     return sig;
-    
 }
+
 
 @end

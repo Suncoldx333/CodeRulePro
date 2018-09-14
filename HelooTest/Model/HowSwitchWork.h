@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VarProtocol.h"
 
-@interface HowSwitchWork : NSObject
+@interface HowSwitchWork : NSObject<VarProtocol>
 
 @end

@@ -22,5 +22,4 @@
     self.resultStr = @"asdad";
 }
 
-
 @end

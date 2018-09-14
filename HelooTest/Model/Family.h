@@ -12,5 +12,15 @@
 @interface Family : NSObject
 
 @property (nonatomic,strong) NSMutableArray<Module *> *modules;
+@property (nonatomic, copy, readonly) NSString *fid;
+@property (nonatomic, strong) NSString *fid3;
+
+@property (nonatomic, strong, readonly) NSArray *fids;
+
+
+@property (nonatomic, copy) NSString *wiilChangA;
+
+- (void)changFid:(NSString *)ssss;
++ (instancetype)shareInstance;
 
 @end
