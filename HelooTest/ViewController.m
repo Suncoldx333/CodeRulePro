@@ -36,7 +36,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "CustomizeProcessView.h"
-
+#import "UIColor+EasyWay.h"
 
 #define createErrorWithDes(m) [NSError errorWithDomain:@"" code:4 userInfo:@{NSLocalizedDescriptionKey:m}]
 #define getRectNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
@@ -181,10 +181,47 @@ typedef void(^testBlock)(NSNumber *);
 
 - (void)tapEvent {
     
-    HowViewCreatedVC *vc = [[HowViewCreatedVC alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    TimePickerVC *vc = [[TimePickerVC alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    /*
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html", @"application/json",@"text/plain",nil];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes=[[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html", @"application/json",@"text/plain",nil];
+    
+    NSString *url = @"http://site.zhaoyunwang/etc/family/data2";
+    [manager GET:url
+      parameters:nil
+        progress:nil
+         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+             
+             NSLog(@"success");
+         }
+         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+             
+             NSLog(@"fail");
+         }];
+     */
 }
 
+- (CAShapeLayer *)circleInPoint {
+    
+    CAShapeLayer *layer = [CAShapeLayer layer];
+    layer.fillColor = [UIColor colorWithRGB:0xffffff].CGColor;
+    layer.strokeColor = [UIColor colorWithRGB:0x57A6FF].CGColor;
+    layer.lineWidth = 1;
+    [layer setLineJoin:kCALineCapRound];
+
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathAddArc(path, NULL, 14, 14, 10, -M_PI_2, M_PI * 1.5, 0);
+    
+    [layer setPath:path];
+    CGPathRelease(path);
+    
+    return layer;
+}
 
 - (void)method {
     

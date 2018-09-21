@@ -16,5 +16,7 @@
 #import "CustonVC.h"
 #import "VCwithXIB.h"
 #import "firstSubVC.h"
+#import "ChartViewController.h"
+#import "TimePickerVC.h"
 
 #endif /* SubVCsHeader_h */

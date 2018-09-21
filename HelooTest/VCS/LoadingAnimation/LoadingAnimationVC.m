@@ -48,10 +48,10 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapEvent)];
     [self.view addGestureRecognizer:tap];
     
-    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    [self.view addSubview:subView];
-    
-    NSLog(@"%@", subView.layer.contents);
+//    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+//    [self.view addSubview:subView];
+//    
+//    NSLog(@"%@", subView.layer.contents);
     
     /*
     UIButton *bt = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
@@ -66,7 +66,7 @@
      
 //    [self makeDynamicAnimator];
 //    [self makeGradient];
-//    [self makeBallAnimaiton];
+    [self makeBallAnimaiton];
     
     /*
     count = 0;

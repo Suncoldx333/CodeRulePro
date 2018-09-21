@@ -28,6 +28,11 @@
 		1D3FFEEB211D816200124D87 /* LottieLogo1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3FFEEA211D816200124D87 /* LottieLogo1.json */; };
 		1D415B4D20DCF05B00D007C5 /* VCwithXIB.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D415B4B20DCF05B00D007C5 /* VCwithXIB.m */; };
 		1D415B4E20DCF05B00D007C5 /* VCwithXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D415B4C20DCF05B00D007C5 /* VCwithXIB.xib */; };
+		1D891B9B215098F80025EFBF /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891B9A215098F80025EFBF /* ChartViewController.m */; };
+		1D891B9F21509A390025EFBF /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891B9E21509A390025EFBF /* ChartView.m */; };
+		1D891BA221509EA40025EFBF /* ChartDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BA121509EA40025EFBF /* ChartDetailView.m */; };
+		1D891BB4215333FA0025EFBF /* TimePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BB3215333FA0025EFBF /* TimePickerVC.m */; };
+		1D891BB82153346D0025EFBF /* TimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BB72153346D0025EFBF /* TimePickerView.m */; };
 		1DAD4F2B20EC7E6300E96F3D /* CustonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD4F2A20EC7E6300E96F3D /* CustonVC.m */; };
 		1DAD4F2E20EC7EFA00E96F3D /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD4F2D20EC7EFA00E96F3D /* NextViewController.m */; };
 		1DC3478A213D0CD900C29EF6 /* TestCollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC34789213D0CD900C29EF6 /* TestCollectionViewVC.m */; };
@@ -97,6 +102,17 @@
 		1D415B4C20DCF05B00D007C5 /* VCwithXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCwithXIB.xib; sourceTree = "<group>"; };
 		1D415B7020E0966300D007C5 /* HelloProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloProtocol.h; sourceTree = "<group>"; };
 		1D8119EF20E096BE0045CDAA /* WhyNoImportModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhyNoImportModel.h; sourceTree = "<group>"; };
+		1D891B99215098F80025EFBF /* ChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
+		1D891B9A215098F80025EFBF /* ChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
+		1D891B9D21509A390025EFBF /* ChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
+		1D891B9E21509A390025EFBF /* ChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartView.m; sourceTree = "<group>"; };
+		1D891BA021509EA40025EFBF /* ChartDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartDetailView.h; sourceTree = "<group>"; };
+		1D891BA121509EA40025EFBF /* ChartDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartDetailView.m; sourceTree = "<group>"; };
+		1D891BA42150F9250025EFBF /* ChartViewProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartViewProtocols.h; sourceTree = "<group>"; };
+		1D891BB2215333FA0025EFBF /* TimePickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimePickerVC.h; sourceTree = "<group>"; };
+		1D891BB3215333FA0025EFBF /* TimePickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimePickerVC.m; sourceTree = "<group>"; };
+		1D891BB62153346D0025EFBF /* TimePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimePickerView.h; sourceTree = "<group>"; };
+		1D891BB72153346D0025EFBF /* TimePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimePickerView.m; sourceTree = "<group>"; };
 		1DAD4F2920EC7E6300E96F3D /* CustonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustonVC.h; sourceTree = "<group>"; };
 		1DAD4F2A20EC7E6300E96F3D /* CustonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustonVC.m; sourceTree = "<group>"; };
 		1DAD4F2C20EC7EFA00E96F3D /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
@@ -238,6 +254,46 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		1D891B98215098A70025EFBF /* LoadingAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				1D21A56121476B3D0002560A /* LoadingAnimationVC.h */,
+				1D21A56221476B3D0002560A /* LoadingAnimationVC.m */,
+				1D21A5702149F5690002560A /* HomepageGradientView.h */,
+				1D21A5712149F5690002560A /* HomepageGradientView.m */,
+				1D21A56421478EEC0002560A /* LoadingAnimationLayer.h */,
+				1D21A56521478EEC0002560A /* LoadingAnimationLayer.m */,
+				1D21A5692147B5A10002560A /* LoadingAnimationView.h */,
+				1D21A56A2147B5A10002560A /* LoadingAnimationView.m */,
+			);
+			path = LoadingAnimation;
+			sourceTree = "<group>";
+		};
+		1D891B9C215098FF0025EFBF /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				1D891B99215098F80025EFBF /* ChartViewController.h */,
+				1D891B9A215098F80025EFBF /* ChartViewController.m */,
+				1D891B9D21509A390025EFBF /* ChartView.h */,
+				1D891B9E21509A390025EFBF /* ChartView.m */,
+				1D891BA42150F9250025EFBF /* ChartViewProtocols.h */,
+				1D891BA021509EA40025EFBF /* ChartDetailView.h */,
+				1D891BA121509EA40025EFBF /* ChartDetailView.m */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		1D891BB5215334000025EFBF /* TimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				1D891BB2215333FA0025EFBF /* TimePickerVC.h */,
+				1D891BB3215333FA0025EFBF /* TimePickerVC.m */,
+				1D891BB62153346D0025EFBF /* TimePickerView.h */,
+				1D891BB72153346D0025EFBF /* TimePickerView.m */,
+			);
+			path = TimePicker;
+			sourceTree = "<group>";
+		};
 		1DFC77BD20BBD7B000F356F1 /* mFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,14 +349,9 @@
 				1DC34792213D23D500C29EF6 /* CustomizeCell.m */,
 				1DC3478B213D102000C29EF6 /* ModifyCell.h */,
 				1DC3478C213D102000C29EF6 /* ModifyCell.m */,
-				1D21A56121476B3D0002560A /* LoadingAnimationVC.h */,
-				1D21A56221476B3D0002560A /* LoadingAnimationVC.m */,
-				1D21A5702149F5690002560A /* HomepageGradientView.h */,
-				1D21A5712149F5690002560A /* HomepageGradientView.m */,
-				1D21A56421478EEC0002560A /* LoadingAnimationLayer.h */,
-				1D21A56521478EEC0002560A /* LoadingAnimationLayer.m */,
-				1D21A5692147B5A10002560A /* LoadingAnimationView.h */,
-				1D21A56A2147B5A10002560A /* LoadingAnimationView.m */,
+				1D891B98215098A70025EFBF /* LoadingAnimation */,
+				1D891B9C215098FF0025EFBF /* Chart */,
+				1D891BB5215334000025EFBF /* TimePicker */,
 			);
 			path = VCS;
 			sourceTree = "<group>";
@@ -487,16 +538,21 @@
 				1D21A56321476B3D0002560A /* LoadingAnimationVC.m in Sources */,
 				1D263DD720B2CFF500BCA719 /* ViewController.m in Sources */,
 				1D2687C821424DBE0039E561 /* UIColor+EasyWay.m in Sources */,
+				1D891BA221509EA40025EFBF /* ChartDetailView.m in Sources */,
 				1DCF4BFF20C4E46200BA82D6 /* NSUserDefaults+hookGet.m in Sources */,
 				1DCC283D2114475B0089DF12 /* UILabel+testCat.m in Sources */,
 				1DAD4F2E20EC7EFA00E96F3D /* NextViewController.m in Sources */,
 				1D263DEB20B2D01D00BCA719 /* OriginModel.m in Sources */,
+				1D891BB4215333FA0025EFBF /* TimePickerVC.m in Sources */,
 				1DFEDEDB20B3B0EC00E06130 /* NSArray+CustomMethod.m in Sources */,
+				1D891B9B215098F80025EFBF /* ChartViewController.m in Sources */,
 				1D21A56B2147B5A10002560A /* LoadingAnimationView.m in Sources */,
 				1DFC77BA20BBCE2E00F356F1 /* CRTestViewController.m in Sources */,
 				1D2687CB21425B130039E561 /* CustomizeSearchView.m in Sources */,
+				1D891BB82153346D0025EFBF /* TimePickerView.m in Sources */,
 				1D19B01420FDB93600017AB1 /* ModeChange.m in Sources */,
 				1DFD147B20B5580400646678 /* ObserverModel.m in Sources */,
+				1D891B9F21509A390025EFBF /* ChartView.m in Sources */,
 				1DC34790213D239800C29EF6 /* CustomizeLayout.m in Sources */,
 				1DFEDEE120B3B1FB00E06130 /* Module.m in Sources */,
 				1D415B4D20DCF05B00D007C5 /* VCwithXIB.m in Sources */,

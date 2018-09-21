@@ -34,11 +34,16 @@
 
 - (void)createEvent {
     
-    HowViewCreatedView *subView = [[HowViewCreatedView alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
+//    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
 //    subView.backgroundColor = [UIColor colorWithRGB:0x111111];
-    [self.view addSubview:subView];
+//    [self.view addSubview:subView];
     
-    NSLog(@"%@", subView.layer);
+    
+    CALayer *layer = [[CALayer alloc] init];
+    layer.frame = CGRectMake(0, 0, 50, 50);
+//    [layer setPosition:CGPointMake(50, 50)];
+    layer.backgroundColor = [UIColor colorWithRGB:0x111111].CGColor;
+    [self.view.layer addSublayer:layer];
 }
 
 @end

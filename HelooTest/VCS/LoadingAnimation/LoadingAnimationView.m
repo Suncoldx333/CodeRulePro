@@ -286,7 +286,7 @@ static NSInteger const progressingDuration = 100;
                                      clockwise:(BOOL)clockwise {
     
     CAShapeLayer *line = [CAShapeLayer layer];
-    [line  setPosition:center];
+    [line setPosition:center];
     [line setFillColor:[UIColor clearColor].CGColor];
     [line setStrokeColor:color.CGColor];
     [line setLineWidth:lineWidth];
