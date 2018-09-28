@@ -13,6 +13,15 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
+#import "UIColor+EasyWay.h"
+#import <Masonry/Masonry.h>
 
+#define navHeight \
+({ \
+CGRect statusRect = [[UIApplication sharedApplication] statusBarFrame]; \
+CGRect navRect = self.navigationController.navigationBar.frame; \
+CGFloat height = statusRect.size.height + navRect.size.height;  \
+(height);\
+})\
 
 #endif /* PrefixHeader_pch */

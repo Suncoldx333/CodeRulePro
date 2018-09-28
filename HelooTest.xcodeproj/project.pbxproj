@@ -32,7 +32,7 @@
 		1D891B9F21509A390025EFBF /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891B9E21509A390025EFBF /* ChartView.m */; };
 		1D891BA221509EA40025EFBF /* ChartDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BA121509EA40025EFBF /* ChartDetailView.m */; };
 		1D891BB4215333FA0025EFBF /* TimePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BB3215333FA0025EFBF /* TimePickerVC.m */; };
-		1D891BB82153346D0025EFBF /* TimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BB72153346D0025EFBF /* TimePickerView.m */; };
+		1D891BBC215482D50025EFBF /* StarAniamitonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BBB215482D50025EFBF /* StarAniamitonViewController.m */; };
 		1DAD4F2B20EC7E6300E96F3D /* CustonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD4F2A20EC7E6300E96F3D /* CustonVC.m */; };
 		1DAD4F2E20EC7EFA00E96F3D /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD4F2D20EC7EFA00E96F3D /* NextViewController.m */; };
 		1DC3478A213D0CD900C29EF6 /* TestCollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC34789213D0CD900C29EF6 /* TestCollectionViewVC.m */; };
@@ -41,6 +41,11 @@
 		1DC34793213D23D500C29EF6 /* CustomizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC34792213D23D500C29EF6 /* CustomizeCell.m */; };
 		1DCC283D2114475B0089DF12 /* UILabel+testCat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC283C2114475B0089DF12 /* UILabel+testCat.m */; };
 		1DCF4BFF20C4E46200BA82D6 /* NSUserDefaults+hookGet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCF4BFE20C4E46200BA82D6 /* NSUserDefaults+hookGet.m */; };
+		1DD4C9F52159DEB500B3D79D /* TouchCustomizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4C9F42159DEB500B3D79D /* TouchCustomizeView.m */; };
+		1DD4C9FC215B223000B3D79D /* WeekSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4C9FB215B223000B3D79D /* WeekSelectViewController.m */; };
+		1DD4C9FF215B2AA600B3D79D /* TimeRepeatConfigureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4C9FE215B2AA600B3D79D /* TimeRepeatConfigureViewController.m */; };
+		1DD4CA02215B2B2100B3D79D /* TimePickerSubviews.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4CA01215B2B2100B3D79D /* TimePickerSubviews.m */; };
+		1DD4CA05215B699700B3D79D /* TimePickerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4CA04215B699700B3D79D /* TimePickerViewModel.m */; };
 		1DFC77AC20BB9BF600F356F1 /* HowSwitchWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC77AB20BB9BF600F356F1 /* HowSwitchWork.m */; };
 		1DFC77AE20BB9C2B00F356F1 /* HelloSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC77AD20BB9C2B00F356F1 /* HelloSwitch.m */; };
 		1DFC77BA20BBCE2E00F356F1 /* CRTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC77B920BBCE2E00F356F1 /* CRTestViewController.m */; };
@@ -111,8 +116,8 @@
 		1D891BA42150F9250025EFBF /* ChartViewProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartViewProtocols.h; sourceTree = "<group>"; };
 		1D891BB2215333FA0025EFBF /* TimePickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimePickerVC.h; sourceTree = "<group>"; };
 		1D891BB3215333FA0025EFBF /* TimePickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimePickerVC.m; sourceTree = "<group>"; };
-		1D891BB62153346D0025EFBF /* TimePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimePickerView.h; sourceTree = "<group>"; };
-		1D891BB72153346D0025EFBF /* TimePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimePickerView.m; sourceTree = "<group>"; };
+		1D891BBA215482D50025EFBF /* StarAniamitonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarAniamitonViewController.h; sourceTree = "<group>"; };
+		1D891BBB215482D50025EFBF /* StarAniamitonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarAniamitonViewController.m; sourceTree = "<group>"; };
 		1DAD4F2920EC7E6300E96F3D /* CustonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustonVC.h; sourceTree = "<group>"; };
 		1DAD4F2A20EC7E6300E96F3D /* CustonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustonVC.m; sourceTree = "<group>"; };
 		1DAD4F2C20EC7EFA00E96F3D /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
@@ -130,6 +135,16 @@
 		1DCC283C2114475B0089DF12 /* UILabel+testCat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+testCat.m"; sourceTree = "<group>"; };
 		1DCF4BFD20C4E46200BA82D6 /* NSUserDefaults+hookGet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+hookGet.h"; sourceTree = "<group>"; };
 		1DCF4BFE20C4E46200BA82D6 /* NSUserDefaults+hookGet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+hookGet.m"; sourceTree = "<group>"; };
+		1DD4C9F32159DEB500B3D79D /* TouchCustomizeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchCustomizeView.h; sourceTree = "<group>"; };
+		1DD4C9F42159DEB500B3D79D /* TouchCustomizeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchCustomizeView.m; sourceTree = "<group>"; };
+		1DD4C9FA215B223000B3D79D /* WeekSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeekSelectViewController.h; sourceTree = "<group>"; };
+		1DD4C9FB215B223000B3D79D /* WeekSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeekSelectViewController.m; sourceTree = "<group>"; };
+		1DD4C9FD215B2AA600B3D79D /* TimeRepeatConfigureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeRepeatConfigureViewController.h; sourceTree = "<group>"; };
+		1DD4C9FE215B2AA600B3D79D /* TimeRepeatConfigureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeRepeatConfigureViewController.m; sourceTree = "<group>"; };
+		1DD4CA00215B2B2100B3D79D /* TimePickerSubviews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimePickerSubviews.h; sourceTree = "<group>"; };
+		1DD4CA01215B2B2100B3D79D /* TimePickerSubviews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimePickerSubviews.m; sourceTree = "<group>"; };
+		1DD4CA03215B699700B3D79D /* TimePickerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimePickerViewModel.h; sourceTree = "<group>"; };
+		1DD4CA04215B699700B3D79D /* TimePickerViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimePickerViewModel.m; sourceTree = "<group>"; };
 		1DFC77AA20BB9BF600F356F1 /* HowSwitchWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HowSwitchWork.h; sourceTree = "<group>"; };
 		1DFC77AB20BB9BF600F356F1 /* HowSwitchWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HowSwitchWork.m; sourceTree = "<group>"; };
 		1DFC77AD20BB9C2B00F356F1 /* HelloSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloSwitch.m; sourceTree = "<group>"; };
@@ -288,10 +303,44 @@
 			children = (
 				1D891BB2215333FA0025EFBF /* TimePickerVC.h */,
 				1D891BB3215333FA0025EFBF /* TimePickerVC.m */,
-				1D891BB62153346D0025EFBF /* TimePickerView.h */,
-				1D891BB72153346D0025EFBF /* TimePickerView.m */,
+				1DD4CA03215B699700B3D79D /* TimePickerViewModel.h */,
+				1DD4CA04215B699700B3D79D /* TimePickerViewModel.m */,
+				1DD4CA00215B2B2100B3D79D /* TimePickerSubviews.h */,
+				1DD4CA01215B2B2100B3D79D /* TimePickerSubviews.m */,
+				1DD4C9FD215B2AA600B3D79D /* TimeRepeatConfigureViewController.h */,
+				1DD4C9FE215B2AA600B3D79D /* TimeRepeatConfigureViewController.m */,
+				1DD4C9FA215B223000B3D79D /* WeekSelectViewController.h */,
+				1DD4C9FB215B223000B3D79D /* WeekSelectViewController.m */,
 			);
 			path = TimePicker;
+			sourceTree = "<group>";
+		};
+		1D891BB9215482AA0025EFBF /* Chaotic */ = {
+			isa = PBXGroup;
+			children = (
+				1DFC77B820BBCE2E00F356F1 /* CRTestViewController.h */,
+				1DFC77B920BBCE2E00F356F1 /* CRTestViewController.m */,
+				1D2687C921425B130039E561 /* CustomizeSearchView.h */,
+				1D2687CA21425B130039E561 /* CustomizeSearchView.m */,
+				1D2687C621424DBE0039E561 /* UIColor+EasyWay.h */,
+				1D2687C721424DBE0039E561 /* UIColor+EasyWay.m */,
+				1D415B4A20DCF05B00D007C5 /* VCwithXIB.h */,
+				1D415B4B20DCF05B00D007C5 /* VCwithXIB.m */,
+				1D415B4C20DCF05B00D007C5 /* VCwithXIB.xib */,
+				1DAD4F2920EC7E6300E96F3D /* CustonVC.h */,
+				1DAD4F2A20EC7E6300E96F3D /* CustonVC.m */,
+				1DAD4F2C20EC7EFA00E96F3D /* NextViewController.h */,
+				1DAD4F2D20EC7EFA00E96F3D /* NextViewController.m */,
+				1DC34788213D0CD900C29EF6 /* TestCollectionViewVC.h */,
+				1DC34789213D0CD900C29EF6 /* TestCollectionViewVC.m */,
+				1DC3478E213D239800C29EF6 /* CustomizeLayout.h */,
+				1DC3478F213D239800C29EF6 /* CustomizeLayout.m */,
+				1DC34791213D23D500C29EF6 /* CustomizeCell.h */,
+				1DC34792213D23D500C29EF6 /* CustomizeCell.m */,
+				1DC3478B213D102000C29EF6 /* ModifyCell.h */,
+				1DC3478C213D102000C29EF6 /* ModifyCell.m */,
+			);
+			path = Chaotic;
 			sourceTree = "<group>";
 		};
 		1DFC77BD20BBD7B000F356F1 /* mFiles */ = {
@@ -328,30 +377,14 @@
 			children = (
 				1DFD147520B502E500646678 /* Dirst */,
 				1DFD147620B502ED00646678 /* Second */,
-				1DFC77B820BBCE2E00F356F1 /* CRTestViewController.h */,
-				1DFC77B920BBCE2E00F356F1 /* CRTestViewController.m */,
-				1D2687C921425B130039E561 /* CustomizeSearchView.h */,
-				1D2687CA21425B130039E561 /* CustomizeSearchView.m */,
-				1D2687C621424DBE0039E561 /* UIColor+EasyWay.h */,
-				1D2687C721424DBE0039E561 /* UIColor+EasyWay.m */,
-				1D415B4A20DCF05B00D007C5 /* VCwithXIB.h */,
-				1D415B4B20DCF05B00D007C5 /* VCwithXIB.m */,
-				1D415B4C20DCF05B00D007C5 /* VCwithXIB.xib */,
-				1DAD4F2920EC7E6300E96F3D /* CustonVC.h */,
-				1DAD4F2A20EC7E6300E96F3D /* CustonVC.m */,
-				1DAD4F2C20EC7EFA00E96F3D /* NextViewController.h */,
-				1DAD4F2D20EC7EFA00E96F3D /* NextViewController.m */,
-				1DC34788213D0CD900C29EF6 /* TestCollectionViewVC.h */,
-				1DC34789213D0CD900C29EF6 /* TestCollectionViewVC.m */,
-				1DC3478E213D239800C29EF6 /* CustomizeLayout.h */,
-				1DC3478F213D239800C29EF6 /* CustomizeLayout.m */,
-				1DC34791213D23D500C29EF6 /* CustomizeCell.h */,
-				1DC34792213D23D500C29EF6 /* CustomizeCell.m */,
-				1DC3478B213D102000C29EF6 /* ModifyCell.h */,
-				1DC3478C213D102000C29EF6 /* ModifyCell.m */,
+				1D891BB9215482AA0025EFBF /* Chaotic */,
 				1D891B98215098A70025EFBF /* LoadingAnimation */,
 				1D891B9C215098FF0025EFBF /* Chart */,
 				1D891BB5215334000025EFBF /* TimePicker */,
+				1D891BBA215482D50025EFBF /* StarAniamitonViewController.h */,
+				1D891BBB215482D50025EFBF /* StarAniamitonViewController.m */,
+				1DD4C9F32159DEB500B3D79D /* TouchCustomizeView.h */,
+				1DD4C9F42159DEB500B3D79D /* TouchCustomizeView.m */,
 			);
 			path = VCS;
 			sourceTree = "<group>";
@@ -533,6 +566,7 @@
 				1DC3478D213D102000C29EF6 /* ModifyCell.m in Sources */,
 				1D21A575214B52130002560A /* HowViewCreatedVC.m in Sources */,
 				1DFC77AE20BB9C2B00F356F1 /* HelloSwitch.m in Sources */,
+				1D891BBC215482D50025EFBF /* StarAniamitonViewController.m in Sources */,
 				1DFEDEEA20B3E95D00E06130 /* firstSubVC.m in Sources */,
 				1D39B614213F7BF900EC3517 /* CustomizeProcessView.m in Sources */,
 				1D21A56321476B3D0002560A /* LoadingAnimationVC.m in Sources */,
@@ -542,16 +576,20 @@
 				1DCF4BFF20C4E46200BA82D6 /* NSUserDefaults+hookGet.m in Sources */,
 				1DCC283D2114475B0089DF12 /* UILabel+testCat.m in Sources */,
 				1DAD4F2E20EC7EFA00E96F3D /* NextViewController.m in Sources */,
+				1DD4CA05215B699700B3D79D /* TimePickerViewModel.m in Sources */,
 				1D263DEB20B2D01D00BCA719 /* OriginModel.m in Sources */,
 				1D891BB4215333FA0025EFBF /* TimePickerVC.m in Sources */,
 				1DFEDEDB20B3B0EC00E06130 /* NSArray+CustomMethod.m in Sources */,
 				1D891B9B215098F80025EFBF /* ChartViewController.m in Sources */,
 				1D21A56B2147B5A10002560A /* LoadingAnimationView.m in Sources */,
+				1DD4C9FC215B223000B3D79D /* WeekSelectViewController.m in Sources */,
 				1DFC77BA20BBCE2E00F356F1 /* CRTestViewController.m in Sources */,
 				1D2687CB21425B130039E561 /* CustomizeSearchView.m in Sources */,
-				1D891BB82153346D0025EFBF /* TimePickerView.m in Sources */,
+				1DD4C9FF215B2AA600B3D79D /* TimeRepeatConfigureViewController.m in Sources */,
+				1DD4C9F52159DEB500B3D79D /* TouchCustomizeView.m in Sources */,
 				1D19B01420FDB93600017AB1 /* ModeChange.m in Sources */,
 				1DFD147B20B5580400646678 /* ObserverModel.m in Sources */,
+				1DD4CA02215B2B2100B3D79D /* TimePickerSubviews.m in Sources */,
 				1D891B9F21509A390025EFBF /* ChartView.m in Sources */,
 				1DC34790213D239800C29EF6 /* CustomizeLayout.m in Sources */,
 				1DFEDEE120B3B1FB00E06130 /* Module.m in Sources */,

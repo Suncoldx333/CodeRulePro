@@ -18,5 +18,7 @@
 #import "firstSubVC.h"
 #import "ChartViewController.h"
 #import "TimePickerVC.h"
+#import "StarAniamitonViewController.h"
+#import "NextViewController.h"
 
 #endif /* SubVCsHeader_h */

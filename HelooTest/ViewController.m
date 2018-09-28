@@ -24,7 +24,6 @@
 #import <objc/runtime.h>
 #import <Toast.h>
 
-#import "NextViewController.h"
 
 #import "ModelNewChange.h"
 #import "ModeChange.h"
@@ -151,37 +150,40 @@ typedef void(^testBlock)(NSNumber *);
 }
 
 - (void)bindViewModel {
-    /*
-    RACSignal *sig1 = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        [subscriber sendError:[NSError errorWithDomain:@"" code:4 userInfo:@{NSLocalizedDescriptionKey:@"nooooo"}]];
-
-        return nil;
-    }];
-
-    RACSignal *sig2 = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        [subscriber sendNext:@3];
-        return nil;
-    }];
     
-    RACSignal *concat = [sig1 concat:sig2];
-    [concat subscribeNext:^(id  _Nullable x) {
-        NSLog(@"%@",x);
-    } error:^(NSError * _Nullable error) {
-        NSLog(@"mes = %@",error.localizedDescription);
-    }];
-    */
-    self.testModel = [[ModelNewChange alloc] init];
-
-    [[RACObserve(self.testModel, fid2) deliverOnMainThread] subscribeNext:^(id x) {
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
-        NSLog(@"fid2_1 = %@",x);
+        NSLog(@"send request");
+        [subscriber sendNext:@1];
+        [subscriber sendCompleted];
+        return nil;
     }];
     
+    RACMulticastConnection *connection = [signal publish];
+
+    
+    [connection.signal subscribeNext:^(id x) {
+        
+        NSLog(@"%@", x);
+    }];
+    
+    [connection.signal subscribeNext:^(id x) {
+        
+        NSLog(@"%@", x);
+    }];
+    
+    [connection connect];
 }
 
 - (void)tapEvent {
     
-//    TimePickerVC *vc = [[TimePickerVC alloc] init];
+    CGFloat height = CGRectGetHeight(self.view.frame);
+    
+//    TimePickerVC *vc = [TimePickerVC viewControllerCreateWithType:TimingVCTypeCreate];
+//    vc.timingModifyBlock = ^(id<TimingContentProtocol> timing, NSString *timingId) {
+//
+//        NSLog(@"hour = %@, minute = %@, days = %@, id = %@", timing.hour, timing.minute, timing.chosenDays, timingId);
+//    };
 //    [self.navigationController pushViewController:vc animated:YES];
     
     /*
@@ -225,7 +227,7 @@ typedef void(^testBlock)(NSNumber *);
 
 - (void)method {
     
-    NSLog(@"method");
+    
     
 }
 
