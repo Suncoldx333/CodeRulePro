@@ -114,6 +114,8 @@ static NSInteger const kMinutePickerTag = 386;
     
 }
 
+
+
 #pragma mark -
 - (UILabel *)titleLabel {
     
@@ -146,8 +148,8 @@ static NSInteger const kMinutePickerTag = 386;
 
 @end
 
-#pragma mark -
-@interface TimePickerView ()<UIPickerViewDelegate, UIPickerViewDataSource> {
+#pragma mark - PICKERVIEW
+@interface TimePickerView ()<UIPickerViewDelegate, UIPickerViewDataSource, UIGestureRecognizerDelegate> {
     NSMutableArray<NSNumber *> *hours;
     NSMutableArray<NSNumber *> *minutes;
 }
@@ -158,6 +160,8 @@ static NSInteger const kMinutePickerTag = 386;
 @property (nonatomic, strong, readwrite) NSNumber *hour;
 @property (nonatomic, strong, readwrite) NSNumber *minute;
 
+@property (nonatomic, strong) UIView *containView;
+
 @end
 
 @implementation TimePickerView
@@ -166,9 +170,11 @@ static NSInteger const kMinutePickerTag = 386;
     
     if (self = [super init]) {
         self.frame = CGRectMake(0, 0, ScreenWidth, 226);
-        
+        self.userInteractionEnabled = YES;
         hours = [[NSMutableArray alloc] init];
         minutes = [[NSMutableArray alloc] init];
+        self.hour = @8;
+        self.minute = @0;
         
         for (NSInteger i = 0; i < 60; i++) {
             
@@ -177,9 +183,33 @@ static NSInteger const kMinutePickerTag = 386;
             }
             [minutes addObject:@(i)];
         }
-        [self addSubview:self.hourPicker];
-        [self addSubview:self.minutePicker];
         
+        [self addSubview:self.containView];
+        
+        [self.containView addSubview:self.hourPicker];
+        [self.containView addSubview:self.minutePicker];
+        
+        [self.containView mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            make.height.mas_equalTo(CGRectGetHeight(self.frame));
+            make.centerX.equalTo(self);
+        }];
+        
+        [self.hourPicker mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            make.height.mas_equalTo(CGRectGetHeight(self.frame));
+            make.width.mas_equalTo(44);
+            make.left.equalTo(self.containView);
+        }];
+        
+        [self.minutePicker mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            make.height.mas_equalTo(CGRectGetHeight(self.frame));
+            make.width.mas_equalTo(44);
+            make.left.mas_equalTo(self.hourPicker.mas_right).offset(40);
+            make.right.mas_equalTo(self.containView.mas_right);
+        }];
+//
 //        CALayer *upper = [[CALayer alloc] init];
 //        upper.frame = CGRectMake(0, 88, ScreenWidth, 0.5);
 //        upper.backgroundColor = [UIColor colorWithRGB:0xe1e1e1].CGColor;
@@ -200,6 +230,27 @@ static NSInteger const kMinutePickerTag = 386;
     [self.minutePicker selectRow:minute.integerValue inComponent:0 animated:NO];
 }
 
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+
+    if (!self.isUserInteractionEnabled || self.isHidden || self.alpha <= 0.01) {
+        return nil;
+    }
+    CGRect touchRect = CGRectInset(self.bounds, 0, 0);
+    if (CGRectContainsPoint(touchRect, point)) {
+
+        for (UIView *subview in [self.subviews reverseObjectEnumerator]) {
+            CGPoint convertedPoint = [subview convertPoint:point fromView:self];
+            UIView *hitTestView = [subview hitTest:convertedPoint withEvent:event];
+            if (hitTestView) {
+                return hitTestView;
+            }
+        }
+        return self.containView;
+    }
+    return nil;
+}
+
+
 #pragma mark -
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     
@@ -216,6 +267,14 @@ static NSInteger const kMinutePickerTag = 386;
 }
 
 - (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    
+    for (UIView *line in pickerView.subviews) {
+        
+        if (line.frame.size.height < 1) {
+            
+            line.hidden = YES;
+        }
+    }
     
     if (pickerView.tag == kHourPickerTag) {
         
@@ -234,18 +293,9 @@ static NSInteger const kMinutePickerTag = 386;
     return attr;
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    
-    if (pickerView.tag == kHourPickerTag) {
-        
-        return [NSString stringWithFormat:@"%02d", [hours objectAtIndex:row].intValue];
-    }
-    return [NSString stringWithFormat:@"%02d", [minutes objectAtIndex:row].intValue];
-}
-
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
     
-    return 50;
+    return 44;
 }
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
@@ -263,6 +313,14 @@ static NSInteger const kMinutePickerTag = 386;
 }
 
 #pragma mark -
+- (UIView *)containView {
+        
+    if (!_containView) {
+        _containView = [[UIView alloc] init];
+        _containView.backgroundColor = [UIColor lightGrayColor];
+    }
+    return _containView;
+}
 
 - (UIPickerView *)hourPicker {
     

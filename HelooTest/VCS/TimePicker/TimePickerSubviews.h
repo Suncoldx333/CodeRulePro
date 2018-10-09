@@ -47,6 +47,8 @@ typedef NS_ENUM(NSInteger, TimingVCType) {
 
 @interface TimePickerView : UIView
 
+- (instancetype)initWithDoubleSelection;
+
 @property (nonatomic, strong, readonly) NSNumber *hour;
 @property (nonatomic, strong, readonly) NSNumber *minute;
 

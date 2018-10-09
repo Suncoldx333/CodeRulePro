@@ -15,6 +15,7 @@ target 'HelooTest' do
   pod 'SVProgressHUD', '~> 2.2.5'
   pod 'Masonry', '~> 1.1.0'
   pod 'Texture', '~> 2.6'
+  pod 'SDWebImage'
   
 end
 

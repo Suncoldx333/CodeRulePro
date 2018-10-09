@@ -40,6 +40,9 @@ PODS:
   - ReactiveCocoa/no-arc (2.5.2)
   - ReactiveCocoa/UI (2.5.2):
     - ReactiveCocoa/Core
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
   - SVProgressHUD (2.2.5)
   - Texture (2.6):
     - Texture/PINRemoteImage (= 2.6)
@@ -57,6 +60,7 @@ DEPENDENCIES:
   - lottie-ios (~> 2.5.0)
   - Masonry (~> 1.1.0)
   - ReactiveCocoa (from `https://github.com/zhao0/ReactiveCocoa.git`, tag `2.5.2`)
+  - SDWebImage
   - SVProgressHUD (~> 2.2.5)
   - Texture (~> 2.6)
   - Toast (~> 4.0.0)
@@ -71,6 +75,7 @@ SPEC REPOS:
     - PINCache
     - PINOperation
     - PINRemoteImage
+    - SDWebImage
     - SVProgressHUD
     - Texture
     - Toast
@@ -95,10 +100,11 @@ SPEC CHECKSUMS:
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   ReactiveCocoa: 3ff25b1bd992ac79c5c79b26b6c0c1713b715bb2
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 261f3190eda61211ba52c2c8122576b9fd7bb9e0
+PODFILE CHECKSUM: 02680ec410696f97dce62195c2b1623957a79902
 
 COCOAPODS: 1.5.3

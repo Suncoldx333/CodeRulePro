@@ -20,5 +20,7 @@
 #import "TimePickerVC.h"
 #import "StarAniamitonViewController.h"
 #import "NextViewController.h"
+#import "DoublePickerViewController.h"
+#import "ImageInLayerViewController.h"
 
 #endif /* SubVCsHeader_h */

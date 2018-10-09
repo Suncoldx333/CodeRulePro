@@ -31,7 +31,7 @@
 
 #import <HMSegmentedControl/HMSegmentedControl.h>
 #import <lottie-ios/Lottie/Lottie.h>
-
+#import <SDWebImage/UIImageView+WebCache.h>
 #import <AFNetworking/AFNetworking.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "CustomizeProcessView.h"
@@ -101,10 +101,25 @@ typedef void(^testBlock)(NSNumber *);
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapEvent)];
     [self.view addGestureRecognizer:tap];
     
-//    [self.view addSubview:self.segmentedControl];
-    
 }
 
+- (void)tapEvent {
+    
+//    ImageInLayerViewController *vc = [[ImageInLayerViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    UIImage *image = [UIImage imageNamed:@"btn_point_selected"];
+    CFDataRef rawData = CGDataProviderCopyData(CGImageGetDataProvider(image.CGImage));
+//    CGBitmapContextCreate(NULL,
+//                          108,
+//                          108,
+//                          8,
+//                          0,
+//                          <#CGColorSpaceRef  _Nullable space#>,
+//                          <#uint32_t bitmapInfo#>)
+}
+
+#pragma mark -
 - (HMSegmentedControl *)segmentedControl {
     
     if (!_segmentedControl) {
@@ -151,42 +166,33 @@ typedef void(^testBlock)(NSNumber *);
 
 - (void)bindViewModel {
     
-    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    RACSignal *signal1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
-        NSLog(@"send request");
+        NSLog(@"send request1");
         [subscriber sendNext:@1];
         [subscriber sendCompleted];
         return nil;
     }];
     
-    RACMulticastConnection *connection = [signal publish];
-
-    
-    [connection.signal subscribeNext:^(id x) {
+    RACSignal *signal2 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
-        NSLog(@"%@", x);
+        NSLog(@"send request2");
+        [subscriber sendNext:@2];
+        [subscriber sendCompleted];
+        return nil;
     }];
     
-    [connection.signal subscribeNext:^(id x) {
+    RACSignal *signal = [RACSignal merge:@[signal1, signal2]];
+    [signal subscribeNext:^(id x) {
         
-        NSLog(@"%@", x);
+        NSLog(@"merge = %@", x);
     }];
-    
-    [connection connect];
 }
 
-- (void)tapEvent {
+
+
+- (void)network {
     
-    CGFloat height = CGRectGetHeight(self.view.frame);
-    
-//    TimePickerVC *vc = [TimePickerVC viewControllerCreateWithType:TimingVCTypeCreate];
-//    vc.timingModifyBlock = ^(id<TimingContentProtocol> timing, NSString *timingId) {
-//
-//        NSLog(@"hour = %@, minute = %@, days = %@, id = %@", timing.hour, timing.minute, timing.chosenDays, timingId);
-//    };
-//    [self.navigationController pushViewController:vc animated:YES];
-    
-    /*
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html", @"application/json",@"text/plain",nil];
@@ -194,18 +200,15 @@ typedef void(^testBlock)(NSNumber *);
     manager.responseSerializer.acceptableContentTypes=[[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html", @"application/json",@"text/plain",nil];
     
     NSString *url = @"http://site.zhaoyunwang/etc/family/data2";
-    [manager GET:url
-      parameters:nil
-        progress:nil
-         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-             
-             NSLog(@"success");
-         }
-         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-             
-             NSLog(@"fail");
-         }];
-     */
+    [manager POST:url
+       parameters:nil
+         progress:nil
+          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+              NSLog(@"success");
+          }
+          failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+              NSLog(@"fail");
+          }];
 }
 
 - (CAShapeLayer *)circleInPoint {
