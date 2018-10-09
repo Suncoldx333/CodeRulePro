@@ -28,6 +28,7 @@
 #import "ModelNewChange.h"
 #import "ModeChange.h"
 #import "UILabel+testCat.h"
+#import "LayerLabel.h"
 
 #import <HMSegmentedControl/HMSegmentedControl.h>
 #import <lottie-ios/Lottie/Lottie.h>
@@ -105,18 +106,14 @@ typedef void(^testBlock)(NSNumber *);
 
 - (void)tapEvent {
     
-//    ImageInLayerViewController *vc = [[ImageInLayerViewController alloc] init];
-//    [self.navigationController pushViewController:vc animated:YES];
-    
-    UIImage *image = [UIImage imageNamed:@"btn_point_selected"];
-    CFDataRef rawData = CGDataProviderCopyData(CGImageGetDataProvider(image.CGImage));
-//    CGBitmapContextCreate(NULL,
-//                          108,
-//                          108,
-//                          8,
-//                          0,
-//                          <#CGColorSpaceRef  _Nullable space#>,
-//                          <#uint32_t bitmapInfo#>)
+    LayerLabel *label = [[LayerLabel alloc] init];
+    label.frame = CGRectMake(0, 0, 100, 200);
+    label.attributedText = [[NSAttributedString alloc] initWithString:@"LayerLabel"
+                                                           attributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0x111111],
+                                                                        NSFontAttributeName : [UIFont systemFontOfSize:15],
+                                                                        NSBackgroundColorAttributeName : [UIColor colorWithRGB:0xffffff]
+                                                                        }];
+    [self.view.layer addSublayer:label];
 }
 
 #pragma mark -

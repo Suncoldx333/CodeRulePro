@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D081858216C47EE0085E16C /* LayerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D081857216C47EE0085E16C /* LayerLabel.m */; };
 		1D19B01420FDB93600017AB1 /* ModeChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19B01320FDB93600017AB1 /* ModeChange.m */; };
 		1D19B01720FDB97000017AB1 /* ModelNewChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19B01620FDB97000017AB1 /* ModelNewChange.m */; };
 		1D21A56321476B3D0002560A /* LoadingAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D21A56221476B3D0002560A /* LoadingAnimationVC.m */; };
@@ -69,6 +70,8 @@
 
 /* Begin PBXFileReference section */
 		1612195B084651AE4AB9DE35 /* Pods-HelooTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelooTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelooTest/Pods-HelooTest.debug.xcconfig"; sourceTree = "<group>"; };
+		1D081856216C47EE0085E16C /* LayerLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerLabel.h; sourceTree = "<group>"; };
+		1D081857216C47EE0085E16C /* LayerLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerLabel.m; sourceTree = "<group>"; };
 		1D1234612123C17A008D97F8 /* ModelHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelHeaders.h; sourceTree = "<group>"; };
 		1D19B01220FDB93600017AB1 /* ModeChange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModeChange.h; sourceTree = "<group>"; };
 		1D19B01320FDB93600017AB1 /* ModeChange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModeChange.m; sourceTree = "<group>"; };
@@ -233,6 +236,8 @@
 				1D263DD320B2CFF500BCA719 /* AppDelegate.m */,
 				1D263DD520B2CFF500BCA719 /* ViewController.h */,
 				1D263DD620B2CFF500BCA719 /* ViewController.m */,
+				1D081856216C47EE0085E16C /* LayerLabel.h */,
+				1D081857216C47EE0085E16C /* LayerLabel.m */,
 				1D21A576214B52460002560A /* SubVCsHeader.h */,
 				1D39B612213F7BF900EC3517 /* CustomizeProcessView.h */,
 				1D39B613213F7BF900EC3517 /* CustomizeProcessView.m */,
@@ -634,6 +639,7 @@
 				1DD4CA50215F160600B3D79D /* TextureTimePickerNode.m in Sources */,
 				1DFEDEE420B3B22D00E06130 /* Family.m in Sources */,
 				1D263DE220B2CFF600BCA719 /* main.m in Sources */,
+				1D081858216C47EE0085E16C /* LayerLabel.m in Sources */,
 				1DFD148320B694BA00646678 /* Tribe.m in Sources */,
 				1D263DD420B2CFF500BCA719 /* AppDelegate.m in Sources */,
 				1DFC77AC20BB9BF600F356F1 /* HowSwitchWork.m in Sources */,
