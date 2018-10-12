@@ -55,6 +55,28 @@
     (height);\
 })\
 
+#define pickerify(KLASS, PROPERTY) interface \
+KLASS (Night) \
+@property (nonatomic, copy, setter = dk_set ## PROPERTY ## Picker:) DKColorPicker dk_ ## PROPERTY ## Picker; \
+@end \
+@interface \
+KLASS () \
+@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers; \
+@end \
+@implementation \
+KLASS (Night) \
+- (DKColorPicker)dk_ ## PROPERTY ## Picker { \
+return objc_getAssociatedObject(self, @selector(dk_ ## PROPERTY ## Picker)); \
+} \
+- (void)dk_set ## PROPERTY ## Picker:(DKColorPicker)picker { \
+objc_setAssociatedObject(self, @selector(dk_ ## PROPERTY ## Picker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC); \
+[self setValue:picker(self.dk_manager.themeVersion) forKeyPath:@keypath(self, PROPERTY)];\
+[self.pickers setValue:[picker copy] forKey:_DKSetterWithPROPERTYerty(@#PROPERTY)]; \
+} \
+@end
+
+#define __PASTE__(A,B) A##B
+
 typedef void(^testBlock)(NSNumber *);
 
 @interface ViewController ()
@@ -67,6 +89,9 @@ typedef void(^testBlock)(NSNumber *);
 @property (nonatomic, strong) Family *sssmodel;
 @property (nonatomic, strong) ModelNewChange *testModel;
 @property (nonatomic, strong) HMSegmentedControl *segmentedControl;
+
+@property (nonatomic, strong) CAShapeLayer *testLayer;
+
 @end
 
 @implementation ViewController{
@@ -77,10 +102,10 @@ typedef void(^testBlock)(NSNumber *);
     [super viewDidLoad];
     [self initUI];
     
-    self.lottieView = [LOTAnimationView animationNamed:@"LottieLogo1"];
-    self.lottieView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight * 0.3);
-    self.lottieView.contentMode = UIViewContentModeScaleAspectFill;
-    [self.view addSubview:self.lottieView];
+//    self.lottieView = [LOTAnimationView animationNamed:@"LottieLogo1"];
+//    self.lottieView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight * 0.3);
+//    self.lottieView.contentMode = UIViewContentModeScaleAspectFill;
+//    [self.view addSubview:self.lottieView];
     
 }
 
@@ -102,18 +127,24 @@ typedef void(^testBlock)(NSNumber *);
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapEvent)];
     [self.view addGestureRecognizer:tap];
     
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(0, 0)];
+    [path addLineToPoint:CGPointMake(100, 0)];
+    [path addLineToPoint:CGPointMake(100, 100)];
+    [path addLineToPoint:CGPointMake(0, 100)];
+    [path addLineToPoint:CGPointMake(0, 0)];
+    
+    self.testLayer = [CAShapeLayer layer];
+    self.testLayer.fillColor = [UIColor colorWithRGB:0x57A6FF].CGColor;
+    self.testLayer.path = path.CGPath;
+    
+    [self.view.layer addSublayer:self.testLayer];
 }
 
 - (void)tapEvent {
     
-    LayerLabel *label = [[LayerLabel alloc] init];
-    label.frame = CGRectMake(0, 0, 100, 200);
-    label.attributedText = [[NSAttributedString alloc] initWithString:@"LayerLabel"
-                                                           attributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0x111111],
-                                                                        NSFontAttributeName : [UIFont systemFontOfSize:15],
-                                                                        NSBackgroundColorAttributeName : [UIColor colorWithRGB:0xffffff]
-                                                                        }];
-    [self.view.layer addSublayer:label];
+    NSArray *array = @[@"1", @"234", @"98"];
+    NSLog(@"%@", array);
 }
 
 #pragma mark -
@@ -151,7 +182,6 @@ typedef void(^testBlock)(NSNumber *);
     CGFloat x = view.bounds.size.width / 2;
     CGFloat y = view.bounds.size.height / 2;
     return CGPointMake(x, y);
-    
 }
 
 - (void)initData {
