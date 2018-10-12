@@ -143,8 +143,7 @@ typedef void(^testBlock)(NSNumber *);
 
 - (void)tapEvent {
     
-    NSArray *array = @[@"1", @"234", @"98"];
-    NSLog(@"%@", array);
+    
 }
 
 #pragma mark -
