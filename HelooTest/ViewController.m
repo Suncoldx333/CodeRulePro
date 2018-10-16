@@ -127,24 +127,31 @@ typedef void(^testBlock)(NSNumber *);
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapEvent)];
     [self.view addGestureRecognizer:tap];
     
-    UIBezierPath *path = [UIBezierPath bezierPath];
-    [path moveToPoint:CGPointMake(0, 0)];
-    [path addLineToPoint:CGPointMake(100, 0)];
-    [path addLineToPoint:CGPointMake(100, 100)];
-    [path addLineToPoint:CGPointMake(0, 100)];
-    [path addLineToPoint:CGPointMake(0, 0)];
-    
-    self.testLayer = [CAShapeLayer layer];
-    self.testLayer.fillColor = [UIColor colorWithRGB:0x57A6FF].CGColor;
-    self.testLayer.path = path.CGPath;
-    
-    [self.view.layer addSublayer:self.testLayer];
+//    UIBezierPath *path = [UIBezierPath bezierPath];
+//    [path moveToPoint:CGPointMake(0, 0)];
+//    [path addLineToPoint:CGPointMake(100, 0)];
+//    [path addLineToPoint:CGPointMake(100, 100)];
+//    [path addLineToPoint:CGPointMake(0, 100)];
+//    [path addLineToPoint:CGPointMake(0, 0)];
+//
+//    self.testLayer = [CAShapeLayer layer];
+//    self.testLayer.fillColor = [UIColor colorWithRGB:0x57A6FF].CGColor;
+//    self.testLayer.path = path.CGPath;
+//
+//    [self.view.layer addSublayer:self.testLayer];
 }
 
 - (void)tapEvent {
     
-    NSArray *array = @[@"1", @"234", @"98"];
-    NSLog(@"%@", array);
+    LayerLabel *label = [[LayerLabel alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
+    label.attributedText = [[NSAttributedString alloc] initWithString:@"LayerLabel"
+                                                           attributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0x111111],
+                                                                        NSFontAttributeName : [UIFont systemFontOfSize:15],
+                                                                        NSBackgroundColorAttributeName : [UIColor colorWithRGB:0xffffff]
+                                                                        }];
+    label.truncationMode = @"end";
+    label.wrapped = YES;
+    [self.view.layer addSublayer:label];
 }
 
 #pragma mark -
@@ -216,8 +223,6 @@ typedef void(^testBlock)(NSNumber *);
     }];
 }
 
-
-
 - (void)network {
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -271,7 +276,6 @@ typedef void(^testBlock)(NSNumber *);
         NSString *numStr = [NSString stringWithFormat:@"%@",num];
         strrr = numStr;
         dispatch_semaphore_signal(sem);
-
         
     }];
     dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
@@ -286,8 +290,6 @@ typedef void(^testBlock)(NSNumber *);
         
         block(num);
     });
-    
-    
 }
 
 - (RACSignal *)deliverSecondSignal:(NSNumber *)firstNumber {
@@ -297,7 +299,6 @@ typedef void(^testBlock)(NSNumber *);
         return nil;
     }];
     return sig;
-    
 }
 
 - (RACSignal *)firstSigTap {
