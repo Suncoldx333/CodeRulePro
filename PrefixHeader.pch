@@ -24,4 +24,11 @@ CGFloat height = statusRect.size.height + navRect.size.height;  \
 (height);\
 })\
 
+#define statusHeight \
+({ \
+CGRect statusRect = [[UIApplication sharedApplication] statusBarFrame]; \
+CGFloat height = statusRect.size.height;  \
+(height);\
+})\
+
 #endif /* PrefixHeader_pch */

@@ -28,6 +28,26 @@
     return self;
 }
 
+- (void)layerLabelSizeToFit {
+    
+    self.wrapped = YES;
+    CGFloat height = [self fitHeight];
+    CGRect frame = self.frame;
+    frame.size.height = height;
+    self.frame = frame;
+}
+
+#pragma mark -GETTER
+- (CGFloat)fitHeight {
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:self.bounds];
+    label.font = self.textFont;
+    label.text = self.text;
+    label.numberOfLines = 0;
+    [label sizeToFit];
+    return label.bounds.size.height;
+}
+
 #pragma mark - SETTER
 - (void)setText:(NSString *)text {
     

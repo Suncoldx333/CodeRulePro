@@ -22,5 +22,8 @@
 #import "NextViewController.h"
 #import "DoublePickerViewController.h"
 #import "ImageInLayerViewController.h"
+#import "SearchViewController.h"
+#import "SearchMainViewController.h"
+#import "SearchResultViewController.h"
 
 #endif /* SubVCsHeader_h */

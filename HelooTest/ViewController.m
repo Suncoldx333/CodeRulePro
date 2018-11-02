@@ -15,6 +15,7 @@
 #import "OriginModel.h"
 #import "ObserverModel.h"
 #import "ModelIm.h"
+#import "ObjectWithProtocol.h"
 
 #import "DevicesIdImports.h"
 #import "NSArray+CustomMethod.h"
@@ -37,6 +38,7 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "CustomizeProcessView.h"
 #import "UIColor+EasyWay.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 #define createErrorWithDes(m) [NSError errorWithDomain:@"" code:4 userInfo:@{NSLocalizedDescriptionKey:m}]
 #define getRectNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
@@ -79,7 +81,7 @@ objc_setAssociatedObject(self, @selector(dk_ ## PROPERTY ## Picker), picker, OBJ
 
 typedef void(^testBlock)(NSNumber *);
 
-@interface ViewController ()
+@interface ViewController ()<SearchViewControllerDelegate>
 
 
 @property (nonatomic, strong) LOTAnimationView *lottieView;
@@ -122,39 +124,52 @@ typedef void(^testBlock)(NSNumber *);
     // Dispose of any resources that can be recreated.
 }
 
+- (void)hello:(testBlock (^)(void))block {
+    
+    block()(@99);
+}
+
 - (void)initUI {
+    
+    [RACScheduler mainThreadScheduler];
+    
     self.view.backgroundColor = [UIColor lightGrayColor];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapEvent)];
     [self.view addGestureRecognizer:tap];
     
-//    UIBezierPath *path = [UIBezierPath bezierPath];
-//    [path moveToPoint:CGPointMake(0, 0)];
-//    [path addLineToPoint:CGPointMake(100, 0)];
-//    [path addLineToPoint:CGPointMake(100, 100)];
-//    [path addLineToPoint:CGPointMake(0, 100)];
-//    [path addLineToPoint:CGPointMake(0, 0)];
-//
-//    self.testLayer = [CAShapeLayer layer];
-//    self.testLayer.fillColor = [UIColor colorWithRGB:0x57A6FF].CGColor;
-//    self.testLayer.path = path.CGPath;
-//
-//    [self.view.layer addSublayer:self.testLayer];
+    [self hello:^testBlock{
+        
+        return ^(NSNumber *num) {
+            NSLog(@"num = %@", num);
+        };
+    }];
+    
+//    UITextField *field = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+//    field.backgroundColor = [UIColor colorWithRGB:0xffffff];
+//    [self.view addSubview:field];
+//    [field becomeFirstResponder];
+    
 }
 
 - (void)tapEvent {
     
-    LayerLabel *label = [[LayerLabel alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
-    label.attributedText = [[NSAttributedString alloc] initWithString:@"LayerLabel"
-                                                           attributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0x111111],
-                                                                        NSFontAttributeName : [UIFont systemFontOfSize:15],
-                                                                        NSBackgroundColorAttributeName : [UIColor colorWithRGB:0xffffff]
-                                                                        }];
-    label.truncationMode = @"end";
-    label.wrapped = YES;
-    [self.view.layer addSublayer:label];
+    LayerLabel *promptLabel = [[LayerLabel alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth - 30, 17)];
+    promptLabel.text = NSLocalizedString(@"str_Drag the dots up and down to modify the temperature, Drag the dots up and down to modify the temperature", nil);
+    promptLabel.alignment = NSTextAlignmentCenter;
+    promptLabel.textFont = [UIFont systemFontOfSize:12];
+    promptLabel.textColor = [UIColor colorWithRGB:0x111111];
+    promptLabel.backgroundColor = [UIColor colorWithRGB:0xffffff].CGColor;
+    [promptLabel layerLabelSizeToFit];
+    [self.view.layer addSublayer:promptLabel];
+
 }
 
-#pragma mark -
+- (void)shouldUpdateResultsController:(NSString *)keyword {
+    
+    NSLog(@"%@", keyword);
+}
+
+#pragma mark -e
 - (HMSegmentedControl *)segmentedControl {
     
     if (!_segmentedControl) {

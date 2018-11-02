@@ -18,5 +18,6 @@
 @property (nonatomic, strong) UIFont *textFont;
 
 - (instancetype)initWithFrame:(CGRect)frame;
+- (void)layerLabelSizeToFit;
 
 @end

@@ -29,6 +29,7 @@
 		1D3FFEEB211D816200124D87 /* LottieLogo1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3FFEEA211D816200124D87 /* LottieLogo1.json */; };
 		1D415B4D20DCF05B00D007C5 /* VCwithXIB.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D415B4B20DCF05B00D007C5 /* VCwithXIB.m */; };
 		1D415B4E20DCF05B00D007C5 /* VCwithXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D415B4C20DCF05B00D007C5 /* VCwithXIB.xib */; };
+		1D602D99217861A000670510 /* ObjectWithProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D602D98217861A000670510 /* ObjectWithProtocol.m */; };
 		1D891B9B215098F80025EFBF /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891B9A215098F80025EFBF /* ChartViewController.m */; };
 		1D891B9F21509A390025EFBF /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891B9E21509A390025EFBF /* ChartView.m */; };
 		1D891BA221509EA40025EFBF /* ChartDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BA121509EA40025EFBF /* ChartDetailView.m */; };
@@ -36,6 +37,9 @@
 		1D891BBC215482D50025EFBF /* StarAniamitonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BBB215482D50025EFBF /* StarAniamitonViewController.m */; };
 		1DAD4F2B20EC7E6300E96F3D /* CustonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD4F2A20EC7E6300E96F3D /* CustonVC.m */; };
 		1DAD4F2E20EC7EFA00E96F3D /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD4F2D20EC7EFA00E96F3D /* NextViewController.m */; };
+		1DBD70CB218ACCFE005E557F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBD70CA218ACCFE005E557F /* SearchViewController.m */; };
+		1DBD70CF218AE652005E557F /* SearchMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBD70CE218AE652005E557F /* SearchMainViewController.m */; };
+		1DBD70D2218AE65F005E557F /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBD70D1218AE65F005E557F /* SearchResultViewController.m */; };
 		1DC3478A213D0CD900C29EF6 /* TestCollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC34789213D0CD900C29EF6 /* TestCollectionViewVC.m */; };
 		1DC3478D213D102000C29EF6 /* ModifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC3478C213D102000C29EF6 /* ModifyCell.m */; };
 		1DC34790213D239800C29EF6 /* CustomizeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC3478F213D239800C29EF6 /* CustomizeLayout.m */; };
@@ -114,6 +118,8 @@
 		1D415B4B20DCF05B00D007C5 /* VCwithXIB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCwithXIB.m; sourceTree = "<group>"; };
 		1D415B4C20DCF05B00D007C5 /* VCwithXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCwithXIB.xib; sourceTree = "<group>"; };
 		1D415B7020E0966300D007C5 /* HelloProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloProtocol.h; sourceTree = "<group>"; };
+		1D602D97217861A000670510 /* ObjectWithProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectWithProtocol.h; sourceTree = "<group>"; };
+		1D602D98217861A000670510 /* ObjectWithProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectWithProtocol.m; sourceTree = "<group>"; };
 		1D8119EF20E096BE0045CDAA /* WhyNoImportModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhyNoImportModel.h; sourceTree = "<group>"; };
 		1D891B99215098F80025EFBF /* ChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
 		1D891B9A215098F80025EFBF /* ChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
@@ -131,6 +137,12 @@
 		1DAD4F2C20EC7EFA00E96F3D /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
 		1DAD4F2D20EC7EFA00E96F3D /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		1DB4CFB820CE0CB4008CA5EE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1DBD70C9218ACCFE005E557F /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		1DBD70CA218ACCFE005E557F /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		1DBD70CD218AE652005E557F /* SearchMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchMainViewController.h; sourceTree = "<group>"; };
+		1DBD70CE218AE652005E557F /* SearchMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchMainViewController.m; sourceTree = "<group>"; };
+		1DBD70D0218AE65F005E557F /* SearchResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		1DBD70D1218AE65F005E557F /* SearchResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
 		1DC34788213D0CD900C29EF6 /* TestCollectionViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCollectionViewVC.h; sourceTree = "<group>"; };
 		1DC34789213D0CD900C29EF6 /* TestCollectionViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCollectionViewVC.m; sourceTree = "<group>"; };
 		1DC3478B213D102000C29EF6 /* ModifyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyCell.h; sourceTree = "<group>"; };
@@ -236,6 +248,8 @@
 				1D263DD320B2CFF500BCA719 /* AppDelegate.m */,
 				1D263DD520B2CFF500BCA719 /* ViewController.h */,
 				1D263DD620B2CFF500BCA719 /* ViewController.m */,
+				1D602D97217861A000670510 /* ObjectWithProtocol.h */,
+				1D602D98217861A000670510 /* ObjectWithProtocol.m */,
 				1D081856216C47EE0085E16C /* LayerLabel.h */,
 				1D081857216C47EE0085E16C /* LayerLabel.m */,
 				1D21A576214B52460002560A /* SubVCsHeader.h */,
@@ -371,6 +385,19 @@
 			path = Chaotic;
 			sourceTree = "<group>";
 		};
+		1DBD70CC218ACD03005E557F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1DBD70C9218ACCFE005E557F /* SearchViewController.h */,
+				1DBD70CA218ACCFE005E557F /* SearchViewController.m */,
+				1DBD70CD218AE652005E557F /* SearchMainViewController.h */,
+				1DBD70CE218AE652005E557F /* SearchMainViewController.m */,
+				1DBD70D0218AE65F005E557F /* SearchResultViewController.h */,
+				1DBD70D1218AE65F005E557F /* SearchResultViewController.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		1DFC77BD20BBD7B000F356F1 /* mFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +442,7 @@
 				1DD4C9F42159DEB500B3D79D /* TouchCustomizeView.m */,
 				1DE90F8C216AF5F100D74DCB /* ImageInLayerViewController.h */,
 				1DE90F8D216AF5F100D74DCB /* ImageInLayerViewController.m */,
+				1DBD70CC218ACD03005E557F /* Search */,
 			);
 			path = VCS;
 			sourceTree = "<group>";
@@ -554,11 +582,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HelooTest/Pods-HelooTest-resources.sh",
 				"${PODS_ROOT}/BeeHive/BeeHive/BeeHive.bundle",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeeHive.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,12 +625,14 @@
 				1DC34793213D23D500C29EF6 /* CustomizeCell.m in Sources */,
 				1DC3478D213D102000C29EF6 /* ModifyCell.m in Sources */,
 				1D21A575214B52130002560A /* HowViewCreatedVC.m in Sources */,
+				1DBD70CB218ACCFE005E557F /* SearchViewController.m in Sources */,
 				1DFC77AE20BB9C2B00F356F1 /* HelloSwitch.m in Sources */,
 				1D891BBC215482D50025EFBF /* StarAniamitonViewController.m in Sources */,
 				1DFEDEEA20B3E95D00E06130 /* firstSubVC.m in Sources */,
 				1D39B614213F7BF900EC3517 /* CustomizeProcessView.m in Sources */,
 				1D21A56321476B3D0002560A /* LoadingAnimationVC.m in Sources */,
 				1D263DD720B2CFF500BCA719 /* ViewController.m in Sources */,
+				1DBD70D2218AE65F005E557F /* SearchResultViewController.m in Sources */,
 				1D2687C821424DBE0039E561 /* UIColor+EasyWay.m in Sources */,
 				1D891BA221509EA40025EFBF /* ChartDetailView.m in Sources */,
 				1DCF4BFF20C4E46200BA82D6 /* NSUserDefaults+hookGet.m in Sources */,
@@ -616,9 +648,11 @@
 				1D21A56B2147B5A10002560A /* LoadingAnimationView.m in Sources */,
 				1DD4C9FC215B223000B3D79D /* WeekSelectViewController.m in Sources */,
 				1DFC77BA20BBCE2E00F356F1 /* CRTestViewController.m in Sources */,
+				1D602D99217861A000670510 /* ObjectWithProtocol.m in Sources */,
 				1DD4CA47215DF44000B3D79D /* DoublePickerViewController.m in Sources */,
 				1D2687CB21425B130039E561 /* CustomizeSearchView.m in Sources */,
 				1DD4C9FF215B2AA600B3D79D /* TimeRepeatConfigureViewController.m in Sources */,
+				1DBD70CF218AE652005E557F /* SearchMainViewController.m in Sources */,
 				1DD4C9F52159DEB500B3D79D /* TouchCustomizeView.m in Sources */,
 				1D19B01420FDB93600017AB1 /* ModeChange.m in Sources */,
 				1DFD147B20B5580400646678 /* ObserverModel.m in Sources */,

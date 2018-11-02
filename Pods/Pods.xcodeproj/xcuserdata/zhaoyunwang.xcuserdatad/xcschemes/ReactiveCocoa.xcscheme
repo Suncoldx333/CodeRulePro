@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "871CB923512E0B7B19B28429FF52ED81"
+               BlueprintIdentifier = "64E8EBE7C569ED4938DE0A1266C90E9B"
                BlueprintName = "ReactiveCocoa"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libReactiveCocoa.a">
