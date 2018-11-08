@@ -16,7 +16,8 @@ PODS:
     - AFNetworking/NSURLSession
   - BeeHive (1.6.0)
   - HMSegmentedControl (1.5.5)
-  - IQKeyboardManager (6.0.6)
+  - IQKeyboardManager-Broadlink (0.1.0)
+  - JSONModel (1.8.0)
   - lottie-ios (2.5.2)
   - Masonry (1.1.0)
   - PINCache (3.0.1-beta.6):
@@ -58,7 +59,8 @@ DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - BeeHive (~> 1.6.0)
   - HMSegmentedControl
-  - IQKeyboardManager (~> 6.0.4)
+  - IQKeyboardManager-Broadlink (from `../../IQKeyboardManager-Broadlink`)
+  - JSONModel (~> 1.8.0)
   - lottie-ios (~> 2.5.0)
   - Masonry (~> 1.1.0)
   - ReactiveCocoa (from `https://github.com/zhao0/ReactiveCocoa.git`, tag `2.5.2`)
@@ -72,7 +74,7 @@ SPEC REPOS:
     - AFNetworking
     - BeeHive
     - HMSegmentedControl
-    - IQKeyboardManager
+    - JSONModel
     - lottie-ios
     - Masonry
     - PINCache
@@ -84,6 +86,8 @@ SPEC REPOS:
     - Toast
 
 EXTERNAL SOURCES:
+  IQKeyboardManager-Broadlink:
+    :path: "../../IQKeyboardManager-Broadlink"
   ReactiveCocoa:
     :git: https://github.com/zhao0/ReactiveCocoa.git
     :tag: 2.5.2
@@ -97,7 +101,8 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   BeeHive: 64c01ddec33b9ef8813701e075eeb732327d0f75
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
-  IQKeyboardManager: 6b4ecd3e59cf55a26133d802d4678721d7f88499
+  IQKeyboardManager-Broadlink: 8c1295b31f581cd5070e4e5f4033108e9b5c2cf2
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
@@ -109,6 +114,6 @@ SPEC CHECKSUMS:
   Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 3cccf78c608969c0acda4484b55d043096f97817
+PODFILE CHECKSUM: 682ab539e6d5ee58bf4c4caaceb50a169461d40e
 
 COCOAPODS: 1.5.3

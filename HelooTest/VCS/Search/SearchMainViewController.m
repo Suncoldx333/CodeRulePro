@@ -91,4 +91,9 @@ static NSString *const kSearchReuseIdentifier = @"SearchCellReuseIdentifier";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+
 @end

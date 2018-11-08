@@ -16,7 +16,8 @@ target 'HelooTest' do
   pod 'Masonry', '~> 1.1.0'
   pod 'Texture', '~> 2.6'
   pod 'SDWebImage'
-  pod 'IQKeyboardManager', '~> 6.0.4'
+  pod 'IQKeyboardManager-Broadlink', :path => '../../IQKeyboardManager-Broadlink'
+  pod 'JSONModel', '~> 1.8.0'
   
 end
 

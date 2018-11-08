@@ -1,0 +1,28 @@
+{
+  "name": "IQKeyboardManager-Broadlink",
+  "version": "0.1.0",
+  "summary": "IQKeyboardManager dealing with navigationbar hide animaiton.",
+  "description": "IQKeyboardManager dealing with navigationbar hide animaiton.",
+  "homepage": "git@gitlab.broadlink.com.cn:iOS/IQKeyboardManager-Broadlink",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Suncoldx333": "zhaoyun.wang@broadlink.com.cn"
+  },
+  "source": {
+    "git": "git@gitlab.broadlink.com.cn:iOS/IQKeyboardManager-Broadlink.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "IQKeyboardManager-Broadlink/Classes/**/*",
+  "resource_bundles": {
+    "IQKeyboardManager-Broadlink": [
+      "IQKeyboardManager-Broadlink/Assets/**/*"
+    ]
+  }
+}

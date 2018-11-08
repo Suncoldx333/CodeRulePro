@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CEC0D83737FC773CFAB63FEA78B4FA8F"
+               BlueprintIdentifier = "81CB48EBF473B56E4C7BEA9157E7A93C"
                BlueprintName = "Texture"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libTexture.a">

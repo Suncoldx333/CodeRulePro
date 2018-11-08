@@ -39,6 +39,7 @@
 #import "CustomizeProcessView.h"
 #import "UIColor+EasyWay.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <Masonry/Masonry.h>
 
 #define createErrorWithDes(m) [NSError errorWithDomain:@"" code:4 userInfo:@{NSLocalizedDescriptionKey:m}]
 #define getRectNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
@@ -55,6 +56,14 @@
     CGRect navRect = self.navigationController.navigationBar.frame; \
     CGFloat height = statusRect.size.height + navRect.size.height;  \
     (height);\
+})\
+
+#define kSafeAreaBottomPadding \
+({ \
+CGFloat bottomPadding = 0; \
+if (@available(iOS 11.0, *)) \
+    bottomPadding = UIApplication.sharedApplication.keyWindow.safeAreaInsets.bottom; \
+(bottomPadding); \
 })\
 
 #define pickerify(KLASS, PROPERTY) interface \
@@ -81,9 +90,9 @@ objc_setAssociatedObject(self, @selector(dk_ ## PROPERTY ## Picker), picker, OBJ
 
 typedef void(^testBlock)(NSNumber *);
 
-@interface ViewController ()<SearchViewControllerDelegate>
-
-
+@interface ViewController ()<SearchViewControllerDelegate>{
+    BOOL change;
+}
 @property (nonatomic, strong) LOTAnimationView *lottieView;
 @property (nonatomic,strong) ObserverModel *model;
 @property (nonatomic,strong) RACSignal *sign1;
@@ -93,6 +102,8 @@ typedef void(^testBlock)(NSNumber *);
 @property (nonatomic, strong) HMSegmentedControl *segmentedControl;
 
 @property (nonatomic, strong) CAShapeLayer *testLayer;
+@property (nonatomic, strong) UITextField *field;
+@property (nonatomic, strong) UIView *header;
 
 @end
 
@@ -104,64 +115,60 @@ typedef void(^testBlock)(NSNumber *);
     [super viewDidLoad];
     [self initUI];
     
-//    self.lottieView = [LOTAnimationView animationNamed:@"LottieLogo1"];
-//    self.lottieView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight * 0.3);
-//    self.lottieView.contentMode = UIViewContentModeScaleAspectFill;
-//    [self.view addSubview:self.lottieView];
-    
+//    self.field = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+//    self.field.backgroundColor = [UIColor colorWithRGB:0xffffff];
+//    [self.view addSubview:self.field];
+    change = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
-//    [[UIApplication sharedApplication] setStatusBarHidden:NO];
-
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)hello:(testBlock (^)(void))block {
-    
-    block()(@99);
 }
 
 - (void)initUI {
     
-    [RACScheduler mainThreadScheduler];
-    
     self.view.backgroundColor = [UIColor lightGrayColor];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapEvent)];
     [self.view addGestureRecognizer:tap];
+
+    UIButton *button = [[UIButton alloc] init];
+    [button setBackgroundColor:[UIColor colorWithRGB:0xffffff]];
+    NSAttributedString *attr =
+    [[NSAttributedString alloc] initWithString:@"确定"
+                                    attributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0x111111],
+                                                 NSFontAttributeName : [UIFont systemFontOfSize:15]
+                                                 }];
+    [button setAttributedTitle:attr forState:UIControlStateNormal];
+    [self.view addSubview:button];
     
-    [self hello:^testBlock{
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        return ^(NSNumber *num) {
-            NSLog(@"num = %@", num);
-        };
+        make.width.mas_equalTo(ScreenWidth);
+        make.left.equalTo(self.view);
+        make.bottom.equalTo(self.view);
+        make.height.mas_equalTo(45 + kSafeAreaBottomPadding);
     }];
     
-//    UITextField *field = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-//    field.backgroundColor = [UIColor colorWithRGB:0xffffff];
-//    [self.view addSubview:field];
-//    [field becomeFirstResponder];
+    /*
+    self.header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 100)];
+    self.header.backgroundColor = [UIColor colorWithRGB:0xffffff];
+    [self.view addSubview:self.header];
     
+    self.field = [[UITextField alloc] initWithFrame:CGRectMake(15, 50, ScreenWidth - 30, 40)];
+    self.field.backgroundColor = [UIColor colorWithRGB:0xb2b2b2];
+    self.field.placeholder = @"Place holder";
+    [self.header addSubview:self.field];
+     */
 }
 
 - (void)tapEvent {
     
-    LayerLabel *promptLabel = [[LayerLabel alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth - 30, 17)];
-    promptLabel.text = NSLocalizedString(@"str_Drag the dots up and down to modify the temperature, Drag the dots up and down to modify the temperature", nil);
-    promptLabel.alignment = NSTextAlignmentCenter;
-    promptLabel.textFont = [UIFont systemFontOfSize:12];
-    promptLabel.textColor = [UIColor colorWithRGB:0x111111];
-    promptLabel.backgroundColor = [UIColor colorWithRGB:0xffffff].CGColor;
-    [promptLabel layerLabelSizeToFit];
-    [self.view.layer addSublayer:promptLabel];
-
+    UILabel *label = [[UILabel alloc] init];
 }
 
 - (void)shouldUpdateResultsController:(NSString *)keyword {
@@ -169,7 +176,7 @@ typedef void(^testBlock)(NSNumber *);
     NSLog(@"%@", keyword);
 }
 
-#pragma mark -e
+#pragma mark -
 - (HMSegmentedControl *)segmentedControl {
     
     if (!_segmentedControl) {
