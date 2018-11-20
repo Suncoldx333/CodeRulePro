@@ -36,6 +36,7 @@
 		1D891BA221509EA40025EFBF /* ChartDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BA121509EA40025EFBF /* ChartDetailView.m */; };
 		1D891BB4215333FA0025EFBF /* TimePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BB3215333FA0025EFBF /* TimePickerVC.m */; };
 		1D891BBC215482D50025EFBF /* StarAniamitonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BBB215482D50025EFBF /* StarAniamitonViewController.m */; };
+		1D9AF414219E6D750036BEE2 /* CustomizeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9AF413219E6D750036BEE2 /* CustomizeTextField.m */; };
 		1DAD4F2B20EC7E6300E96F3D /* CustonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD4F2A20EC7E6300E96F3D /* CustonVC.m */; };
 		1DAD4F2E20EC7EFA00E96F3D /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD4F2D20EC7EFA00E96F3D /* NextViewController.m */; };
 		1DBD70CB218ACCFE005E557F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBD70CA218ACCFE005E557F /* SearchViewController.m */; };
@@ -135,6 +136,8 @@
 		1D891BB3215333FA0025EFBF /* TimePickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimePickerVC.m; sourceTree = "<group>"; };
 		1D891BBA215482D50025EFBF /* StarAniamitonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarAniamitonViewController.h; sourceTree = "<group>"; };
 		1D891BBB215482D50025EFBF /* StarAniamitonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarAniamitonViewController.m; sourceTree = "<group>"; };
+		1D9AF412219E6D750036BEE2 /* CustomizeTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomizeTextField.h; sourceTree = "<group>"; };
+		1D9AF413219E6D750036BEE2 /* CustomizeTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomizeTextField.m; sourceTree = "<group>"; };
 		1DAD4F2920EC7E6300E96F3D /* CustonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustonVC.h; sourceTree = "<group>"; };
 		1DAD4F2A20EC7E6300E96F3D /* CustonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustonVC.m; sourceTree = "<group>"; };
 		1DAD4F2C20EC7EFA00E96F3D /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
@@ -251,15 +254,8 @@
 				1D263DD320B2CFF500BCA719 /* AppDelegate.m */,
 				1D263DD520B2CFF500BCA719 /* ViewController.h */,
 				1D263DD620B2CFF500BCA719 /* ViewController.m */,
-				1D602D97217861A000670510 /* ObjectWithProtocol.h */,
-				1D602D98217861A000670510 /* ObjectWithProtocol.m */,
-				1D081856216C47EE0085E16C /* LayerLabel.h */,
-				1D081857216C47EE0085E16C /* LayerLabel.m */,
+				1D9AF411219E6D510036BEE2 /* SubViews */,
 				1D21A576214B52460002560A /* SubVCsHeader.h */,
-				1D39B612213F7BF900EC3517 /* CustomizeProcessView.h */,
-				1D39B613213F7BF900EC3517 /* CustomizeProcessView.m */,
-				1DCC283B2114475B0089DF12 /* UILabel+testCat.h */,
-				1DCC283C2114475B0089DF12 /* UILabel+testCat.m */,
 				1DFD147720B502F400646678 /* VCS */,
 				1D263DD820B2CFF500BCA719 /* Main.storyboard */,
 				1D263DDB20B2CFF600BCA719 /* Assets.xcassets */,
@@ -273,6 +269,8 @@
 		1D263DE820B2D00B00BCA719 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1D602D97217861A000670510 /* ObjectWithProtocol.h */,
+				1D602D98217861A000670510 /* ObjectWithProtocol.m */,
 				1DFD147C20B693A600646678 /* StoryBgModel */,
 				1D415B4920DCE32F00D007C5 /* ModelIm.h */,
 				1D263DE920B2D01D00BCA719 /* OriginModel.h */,
@@ -390,6 +388,19 @@
 			path = Chaotic;
 			sourceTree = "<group>";
 		};
+		1D9AF411219E6D510036BEE2 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				1D081856216C47EE0085E16C /* LayerLabel.h */,
+				1D081857216C47EE0085E16C /* LayerLabel.m */,
+				1D39B612213F7BF900EC3517 /* CustomizeProcessView.h */,
+				1D39B613213F7BF900EC3517 /* CustomizeProcessView.m */,
+				1D9AF412219E6D750036BEE2 /* CustomizeTextField.h */,
+				1D9AF413219E6D750036BEE2 /* CustomizeTextField.m */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		1DBD70CC218ACD03005E557F /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +485,8 @@
 		1DFEDED820B3B0BC00E06130 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				1DCC283B2114475B0089DF12 /* UILabel+testCat.h */,
+				1DCC283C2114475B0089DF12 /* UILabel+testCat.m */,
 				1DFEDED920B3B0EC00E06130 /* NSArray+CustomMethod.h */,
 				1DFEDEDA20B3B0EC00E06130 /* NSArray+CustomMethod.m */,
 				1DCF4BFD20C4E46200BA82D6 /* NSUserDefaults+hookGet.h */,
@@ -665,6 +678,7 @@
 				1DD4CA02215B2B2100B3D79D /* TimePickerSubviews.m in Sources */,
 				1D891B9F21509A390025EFBF /* ChartView.m in Sources */,
 				1DC34790213D239800C29EF6 /* CustomizeLayout.m in Sources */,
+				1D9AF414219E6D750036BEE2 /* CustomizeTextField.m in Sources */,
 				1DFEDEE120B3B1FB00E06130 /* Module.m in Sources */,
 				1D415B4D20DCF05B00D007C5 /* VCwithXIB.m in Sources */,
 				1DFC77BC20BBD7A500F356F1 /* ShowRules.m in Sources */,

@@ -30,6 +30,7 @@
 #import "ModeChange.h"
 #import "UILabel+testCat.h"
 #import "LayerLabel.h"
+#import "CustomizeTextField.h"
 
 #import <HMSegmentedControl/HMSegmentedControl.h>
 #import <lottie-ios/Lottie/Lottie.h>
@@ -90,7 +91,7 @@ objc_setAssociatedObject(self, @selector(dk_ ## PROPERTY ## Picker), picker, OBJ
 
 typedef void(^testBlock)(NSNumber *);
 
-@interface ViewController ()<SearchViewControllerDelegate>{
+@interface ViewController ()<SearchViewControllerDelegate, UITextFieldDelegate>{
     BOOL change;
 }
 @property (nonatomic, strong) LOTAnimationView *lottieView;
@@ -104,6 +105,7 @@ typedef void(^testBlock)(NSNumber *);
 @property (nonatomic, strong) CAShapeLayer *testLayer;
 @property (nonatomic, strong) UITextField *field;
 @property (nonatomic, strong) UIView *header;
+@property (nonatomic, strong) UIButton *button;
 
 @end
 
@@ -115,9 +117,6 @@ typedef void(^testBlock)(NSNumber *);
     [super viewDidLoad];
     [self initUI];
     
-//    self.field = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-//    self.field.backgroundColor = [UIColor colorWithRGB:0xffffff];
-//    [self.view addSubview:self.field];
     change = NO;
 }
 
@@ -133,20 +132,27 @@ typedef void(^testBlock)(NSNumber *);
 - (void)initUI {
     
     self.view.backgroundColor = [UIColor lightGrayColor];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapEvent)];
-    [self.view addGestureRecognizer:tap];
 
-    UIButton *button = [[UIButton alloc] init];
-    [button setBackgroundColor:[UIColor colorWithRGB:0xffffff]];
+    self.button = [[UIButton alloc] init];
+    [self.button setBackgroundColor:[UIColor colorWithRGB:0xffffff]];
     NSAttributedString *attr =
     [[NSAttributedString alloc] initWithString:@"确定"
                                     attributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0x111111],
                                                  NSFontAttributeName : [UIFont systemFontOfSize:15]
                                                  }];
-    [button setAttributedTitle:attr forState:UIControlStateNormal];
-    [self.view addSubview:button];
+    [self.button setAttributedTitle:attr forState:UIControlStateNormal];
     
-    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+    NSAttributedString *newAttr =
+    [[NSAttributedString alloc] initWithString:@"不确定"
+                                    attributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0x111111],
+                                                 NSFontAttributeName : [UIFont systemFontOfSize:15]
+                                                 }];
+    [self.button setAttributedTitle:newAttr forState:UIControlStateSelected];
+
+    [self.button addTarget:self action:@selector(tapEvent) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.button];
+    
+    [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.width.mas_equalTo(ScreenWidth);
         make.left.equalTo(self.view);
@@ -154,21 +160,23 @@ typedef void(^testBlock)(NSNumber *);
         make.height.mas_equalTo(45 + kSafeAreaBottomPadding);
     }];
     
-    /*
-    self.header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 100)];
-    self.header.backgroundColor = [UIColor colorWithRGB:0xffffff];
-    [self.view addSubview:self.header];
+    CustomizeTextField *field = [[CustomizeTextField alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 45)];
+    field.delegate = self;
+    [self.view addSubview:field];
     
-    self.field = [[UITextField alloc] initWithFrame:CGRectMake(15, 50, ScreenWidth - 30, 40)];
-    self.field.backgroundColor = [UIColor colorWithRGB:0xb2b2b2];
-    self.field.placeholder = @"Place holder";
-    [self.header addSubview:self.field];
-     */
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    NSMutableString * changedString = [[NSMutableString alloc] initWithString:textField.text];
+    [changedString replaceCharactersInRange:range withString:string];
+    
+    return changedString.length < 10;
 }
 
 - (void)tapEvent {
     
-    UILabel *label = [[UILabel alloc] init];
+    
 }
 
 - (void)shouldUpdateResultsController:(NSString *)keyword {
