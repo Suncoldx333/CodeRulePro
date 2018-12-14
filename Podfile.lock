@@ -17,6 +17,7 @@ PODS:
   - BeeHive (1.6.0)
   - HMSegmentedControl (1.5.5)
   - IQKeyboardManager-Broadlink (0.1.0)
+  - JSONKit-BroadLink (1.1.1)
   - JSONModel (1.8.0)
   - lottie-ios (2.5.2)
   - Masonry (1.1.0)
@@ -60,6 +61,7 @@ DEPENDENCIES:
   - BeeHive (~> 1.6.0)
   - HMSegmentedControl
   - IQKeyboardManager-Broadlink (from `../../IQKeyboardManager-Broadlink`)
+  - JSONKit-BroadLink
   - JSONModel (~> 1.8.0)
   - lottie-ios (~> 2.5.0)
   - Masonry (~> 1.1.0)
@@ -70,6 +72,8 @@ DEPENDENCIES:
   - Toast (~> 4.0.0)
 
 SPEC REPOS:
+  "git@gitlab.broadlink.com.cn:iOS/BLSpecs.git":
+    - JSONKit-BroadLink
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - BeeHive
@@ -102,6 +106,7 @@ SPEC CHECKSUMS:
   BeeHive: 64c01ddec33b9ef8813701e075eeb732327d0f75
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   IQKeyboardManager-Broadlink: 8c1295b31f581cd5070e4e5f4033108e9b5c2cf2
+  JSONKit-BroadLink: 6667442f42c1a6b70299c4f99d9ae0989335073c
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -114,6 +119,6 @@ SPEC CHECKSUMS:
   Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 682ab539e6d5ee58bf4c4caaceb50a169461d40e
+PODFILE CHECKSUM: b18fdb6195f6f9ea2da43da6c3c1f30beeb857ba
 
 COCOAPODS: 1.5.3

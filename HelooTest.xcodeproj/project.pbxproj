@@ -24,6 +24,7 @@
 		1D263DEB20B2D01D00BCA719 /* OriginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D263DEA20B2D01D00BCA719 /* OriginModel.m */; };
 		1D2687C821424DBE0039E561 /* UIColor+EasyWay.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2687C721424DBE0039E561 /* UIColor+EasyWay.m */; };
 		1D2687CB21425B130039E561 /* CustomizeSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2687CA21425B130039E561 /* CustomizeSearchView.m */; };
+		1D3035B721AFBD1D00E8E392 /* ReaSubModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3035B621AFBD1D00E8E392 /* ReaSubModel1.m */; };
 		1D39B614213F7BF900EC3517 /* CustomizeProcessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B613213F7BF900EC3517 /* CustomizeProcessView.m */; };
 		1D3FFEE9211D802900124D87 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3FFEE8211D802900124D87 /* data.json */; };
 		1D3FFEEB211D816200124D87 /* LottieLogo1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3FFEEA211D816200124D87 /* LottieLogo1.json */; };
@@ -31,6 +32,8 @@
 		1D415B4E20DCF05B00D007C5 /* VCwithXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D415B4C20DCF05B00D007C5 /* VCwithXIB.xib */; };
 		1D602D99217861A000670510 /* ObjectWithProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D602D98217861A000670510 /* ObjectWithProtocol.m */; };
 		1D65EDC02193E17900681843 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D65EDBF2193E17900681843 /* TestModel.m */; };
+		1D77DCF921A646480002705C /* UICollectionViewLeftAlignFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D77DCF821A646480002705C /* UICollectionViewLeftAlignFlowLayout.m */; };
+		1D77DCFE21A687270002705C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D77DD0021A687270002705C /* Localizable.strings */; };
 		1D891B9B215098F80025EFBF /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891B9A215098F80025EFBF /* ChartViewController.m */; };
 		1D891B9F21509A390025EFBF /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891B9E21509A390025EFBF /* ChartView.m */; };
 		1D891BA221509EA40025EFBF /* ChartDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BA121509EA40025EFBF /* ChartDetailView.m */; };
@@ -57,6 +60,7 @@
 		1DD4CA4A215DF9F800B3D79D /* CustomizePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4CA49215DF9F800B3D79D /* CustomizePicker.m */; };
 		1DD4CA4D215F15E000B3D79D /* TextureTimePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4CA4C215F15E000B3D79D /* TextureTimePickerViewController.m */; };
 		1DD4CA50215F160600B3D79D /* TextureTimePickerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4CA4F215F160600B3D79D /* TextureTimePickerNode.m */; };
+		1DD4F7B221C0A2AD00CC3E01 /* StatusAniamtionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4F7B121C0A2AD00CC3E01 /* StatusAniamtionViewController.m */; };
 		1DE90F8E216AF5F100D74DCB /* ImageInLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE90F8D216AF5F100D74DCB /* ImageInLayerViewController.m */; };
 		1DFC77AC20BB9BF600F356F1 /* HowSwitchWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC77AB20BB9BF600F356F1 /* HowSwitchWork.m */; };
 		1DFC77AE20BB9C2B00F356F1 /* HelloSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC77AD20BB9C2B00F356F1 /* HelloSwitch.m */; };
@@ -110,6 +114,8 @@
 		1D2687C721424DBE0039E561 /* UIColor+EasyWay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EasyWay.m"; sourceTree = "<group>"; };
 		1D2687C921425B130039E561 /* CustomizeSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomizeSearchView.h; sourceTree = "<group>"; };
 		1D2687CA21425B130039E561 /* CustomizeSearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomizeSearchView.m; sourceTree = "<group>"; };
+		1D3035B521AFBD1D00E8E392 /* ReaSubModel1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReaSubModel1.h; sourceTree = "<group>"; };
+		1D3035B621AFBD1D00E8E392 /* ReaSubModel1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReaSubModel1.m; sourceTree = "<group>"; };
 		1D39B612213F7BF900EC3517 /* CustomizeProcessView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomizeProcessView.h; sourceTree = "<group>"; };
 		1D39B613213F7BF900EC3517 /* CustomizeProcessView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomizeProcessView.m; sourceTree = "<group>"; };
 		1D3FFEE8211D802900124D87 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
@@ -124,6 +130,12 @@
 		1D602D98217861A000670510 /* ObjectWithProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectWithProtocol.m; sourceTree = "<group>"; };
 		1D65EDBE2193E17900681843 /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
 		1D65EDBF2193E17900681843 /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		1D77DCF721A646480002705C /* UICollectionViewLeftAlignFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewLeftAlignFlowLayout.h; sourceTree = "<group>"; };
+		1D77DCF821A646480002705C /* UICollectionViewLeftAlignFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewLeftAlignFlowLayout.m; sourceTree = "<group>"; };
+		1D77DCFA21A686C70002705C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		1D77DCFB21A686C70002705C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		1D77DCFF21A687270002705C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1D77DD0121A6872A0002705C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1D8119EF20E096BE0045CDAA /* WhyNoImportModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhyNoImportModel.h; sourceTree = "<group>"; };
 		1D891B99215098F80025EFBF /* ChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
 		1D891B9A215098F80025EFBF /* ChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
@@ -138,6 +150,7 @@
 		1D891BBB215482D50025EFBF /* StarAniamitonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarAniamitonViewController.m; sourceTree = "<group>"; };
 		1D9AF412219E6D750036BEE2 /* CustomizeTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomizeTextField.h; sourceTree = "<group>"; };
 		1D9AF413219E6D750036BEE2 /* CustomizeTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomizeTextField.m; sourceTree = "<group>"; };
+		1DAC721421B7702300C644FF /* SearchHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchHeader.h; sourceTree = "<group>"; };
 		1DAD4F2920EC7E6300E96F3D /* CustonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustonVC.h; sourceTree = "<group>"; };
 		1DAD4F2A20EC7E6300E96F3D /* CustonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustonVC.m; sourceTree = "<group>"; };
 		1DAD4F2C20EC7EFA00E96F3D /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
@@ -179,6 +192,10 @@
 		1DD4CA4C215F15E000B3D79D /* TextureTimePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextureTimePickerViewController.m; sourceTree = "<group>"; };
 		1DD4CA4E215F160600B3D79D /* TextureTimePickerNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureTimePickerNode.h; sourceTree = "<group>"; };
 		1DD4CA4F215F160600B3D79D /* TextureTimePickerNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextureTimePickerNode.m; sourceTree = "<group>"; };
+		1DD4F7B021C0A2AD00CC3E01 /* StatusAniamtionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusAniamtionViewController.h; sourceTree = "<group>"; };
+		1DD4F7B121C0A2AD00CC3E01 /* StatusAniamtionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusAniamtionViewController.m; sourceTree = "<group>"; };
+		1DD4F7B321C0A2EA00CC3E01 /* ThirdCodeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdCodeHeader.h; sourceTree = "<group>"; };
+		1DD4F7B421C0A36100CC3E01 /* MacroHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroHeader.h; sourceTree = "<group>"; };
 		1DE90F8C216AF5F100D74DCB /* ImageInLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageInLayerViewController.h; sourceTree = "<group>"; };
 		1DE90F8D216AF5F100D74DCB /* ImageInLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageInLayerViewController.m; sourceTree = "<group>"; };
 		1DFC77AA20BB9BF600F356F1 /* HowSwitchWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HowSwitchWork.h; sourceTree = "<group>"; };
@@ -254,14 +271,19 @@
 				1D263DD320B2CFF500BCA719 /* AppDelegate.m */,
 				1D263DD520B2CFF500BCA719 /* ViewController.h */,
 				1D263DD620B2CFF500BCA719 /* ViewController.m */,
+				1D3035B521AFBD1D00E8E392 /* ReaSubModel1.h */,
+				1D3035B621AFBD1D00E8E392 /* ReaSubModel1.m */,
 				1D9AF411219E6D510036BEE2 /* SubViews */,
 				1D21A576214B52460002560A /* SubVCsHeader.h */,
+				1DD4F7B421C0A36100CC3E01 /* MacroHeader.h */,
+				1DD4F7B321C0A2EA00CC3E01 /* ThirdCodeHeader.h */,
 				1DFD147720B502F400646678 /* VCS */,
 				1D263DD820B2CFF500BCA719 /* Main.storyboard */,
 				1D263DDB20B2CFF600BCA719 /* Assets.xcassets */,
 				1D263DDD20B2CFF600BCA719 /* LaunchScreen.storyboard */,
 				1D263DE020B2CFF600BCA719 /* Info.plist */,
 				1D263DE120B2CFF600BCA719 /* main.m */,
+				1D77DD0021A687270002705C /* Localizable.strings */,
 			);
 			path = HelooTest;
 			sourceTree = "<group>";
@@ -397,6 +419,8 @@
 				1D39B613213F7BF900EC3517 /* CustomizeProcessView.m */,
 				1D9AF412219E6D750036BEE2 /* CustomizeTextField.h */,
 				1D9AF413219E6D750036BEE2 /* CustomizeTextField.m */,
+				1D77DCF721A646480002705C /* UICollectionViewLeftAlignFlowLayout.h */,
+				1D77DCF821A646480002705C /* UICollectionViewLeftAlignFlowLayout.m */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -410,6 +434,7 @@
 				1DBD70CE218AE652005E557F /* SearchMainViewController.m */,
 				1DBD70D0218AE65F005E557F /* SearchResultViewController.h */,
 				1DBD70D1218AE65F005E557F /* SearchResultViewController.m */,
+				1DAC721421B7702300C644FF /* SearchHeader.h */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -459,6 +484,8 @@
 				1DE90F8C216AF5F100D74DCB /* ImageInLayerViewController.h */,
 				1DE90F8D216AF5F100D74DCB /* ImageInLayerViewController.m */,
 				1DBD70CC218ACD03005E557F /* Search */,
+				1DD4F7B021C0A2AD00CC3E01 /* StatusAniamtionViewController.h */,
+				1DD4F7B121C0A2AD00CC3E01 /* StatusAniamtionViewController.m */,
 			);
 			path = VCS;
 			sourceTree = "<group>";
@@ -583,6 +610,7 @@
 				1D263DDF20B2CFF600BCA719 /* LaunchScreen.storyboard in Resources */,
 				1D3FFEEB211D816200124D87 /* LottieLogo1.json in Resources */,
 				1D263DDC20B2CFF600BCA719 /* Assets.xcassets in Resources */,
+				1D77DCFE21A687270002705C /* Localizable.strings in Resources */,
 				1D415B4E20DCF05B00D007C5 /* VCwithXIB.xib in Resources */,
 				1D3FFEE9211D802900124D87 /* data.json in Resources */,
 				1D263DDA20B2CFF500BCA719 /* Main.storyboard in Resources */,
@@ -652,6 +680,7 @@
 				1D263DD720B2CFF500BCA719 /* ViewController.m in Sources */,
 				1DBD70D2218AE65F005E557F /* SearchResultViewController.m in Sources */,
 				1D2687C821424DBE0039E561 /* UIColor+EasyWay.m in Sources */,
+				1D3035B721AFBD1D00E8E392 /* ReaSubModel1.m in Sources */,
 				1D891BA221509EA40025EFBF /* ChartDetailView.m in Sources */,
 				1DCF4BFF20C4E46200BA82D6 /* NSUserDefaults+hookGet.m in Sources */,
 				1DD4CA4A215DF9F800B3D79D /* CustomizePicker.m in Sources */,
@@ -667,6 +696,7 @@
 				1DD4C9FC215B223000B3D79D /* WeekSelectViewController.m in Sources */,
 				1DFC77BA20BBCE2E00F356F1 /* CRTestViewController.m in Sources */,
 				1D602D99217861A000670510 /* ObjectWithProtocol.m in Sources */,
+				1DD4F7B221C0A2AD00CC3E01 /* StatusAniamtionViewController.m in Sources */,
 				1DD4CA47215DF44000B3D79D /* DoublePickerViewController.m in Sources */,
 				1D2687CB21425B130039E561 /* CustomizeSearchView.m in Sources */,
 				1DD4C9FF215B2AA600B3D79D /* TimeRepeatConfigureViewController.m in Sources */,
@@ -685,6 +715,7 @@
 				1D21A5722149F5690002560A /* HomepageGradientView.m in Sources */,
 				1DFD147F20B693FB00646678 /* Emperor.m in Sources */,
 				1DFEDEED20B3E96B00E06130 /* SecondSubViewController.m in Sources */,
+				1D77DCF921A646480002705C /* UICollectionViewLeftAlignFlowLayout.m in Sources */,
 				1DC3478A213D0CD900C29EF6 /* TestCollectionViewVC.m in Sources */,
 				1DFEDEDE20B3B1C400E06130 /* Device.m in Sources */,
 				1D21A56621478EEC0002560A /* LoadingAnimationLayer.m in Sources */,
@@ -707,6 +738,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				1D263DD920B2CFF500BCA719 /* Base */,
+				1D77DCFA21A686C70002705C /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -715,8 +747,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				1D263DDE20B2CFF600BCA719 /* Base */,
+				1D77DCFB21A686C70002705C /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1D77DD0021A687270002705C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D77DCFF21A687270002705C /* zh-Hans */,
+				1D77DD0121A6872A0002705C /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -726,6 +768,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -784,6 +827,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

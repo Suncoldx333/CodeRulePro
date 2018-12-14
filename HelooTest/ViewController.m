@@ -19,81 +19,25 @@
 
 #import "DevicesIdImports.h"
 #import "NSArray+CustomMethod.h"
-
-#import <ReactiveCocoa/ReactiveCocoa.h>
-
-#import <objc/runtime.h>
-#import <Toast.h>
-
-
 #import "ModelNewChange.h"
 #import "ModeChange.h"
 #import "UILabel+testCat.h"
 #import "LayerLabel.h"
 #import "CustomizeTextField.h"
-
-#import <HMSegmentedControl/HMSegmentedControl.h>
-#import <lottie-ios/Lottie/Lottie.h>
-#import <SDWebImage/UIImageView+WebCache.h>
-#import <AFNetworking/AFNetworking.h>
-#import <SVProgressHUD/SVProgressHUD.h>
 #import "CustomizeProcessView.h"
 #import "UIColor+EasyWay.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
-#import <Masonry/Masonry.h>
+#import "ReaSubModel1.h"
 
-#define createErrorWithDes(m) [NSError errorWithDomain:@"" code:4 userInfo:@{NSLocalizedDescriptionKey:m}]
-#define getRectNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
+#import "ThirdCodeHeader.h"
+#import "SubVCsHeader.h"
+#import "MacroHeader.h"
 
-#define GetURLWith(tag) \
-({ \
-    NSString *inputId = [NSString stringWithFormat:@"input = %ld",(long)tag]; \
-    (inputId);\
-})\
-
-#define navHeight \
-({ \
-    CGRect statusRect = [[UIApplication sharedApplication] statusBarFrame]; \
-    CGRect navRect = self.navigationController.navigationBar.frame; \
-    CGFloat height = statusRect.size.height + navRect.size.height;  \
-    (height);\
-})\
-
-#define kSafeAreaBottomPadding \
-({ \
-CGFloat bottomPadding = 0; \
-if (@available(iOS 11.0, *)) \
-    bottomPadding = UIApplication.sharedApplication.keyWindow.safeAreaInsets.bottom; \
-(bottomPadding); \
-})\
-
-#define pickerify(KLASS, PROPERTY) interface \
-KLASS (Night) \
-@property (nonatomic, copy, setter = dk_set ## PROPERTY ## Picker:) DKColorPicker dk_ ## PROPERTY ## Picker; \
-@end \
-@interface \
-KLASS () \
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers; \
-@end \
-@implementation \
-KLASS (Night) \
-- (DKColorPicker)dk_ ## PROPERTY ## Picker { \
-return objc_getAssociatedObject(self, @selector(dk_ ## PROPERTY ## Picker)); \
-} \
-- (void)dk_set ## PROPERTY ## Picker:(DKColorPicker)picker { \
-objc_setAssociatedObject(self, @selector(dk_ ## PROPERTY ## Picker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC); \
-[self setValue:picker(self.dk_manager.themeVersion) forKeyPath:@keypath(self, PROPERTY)];\
-[self.pickers setValue:[picker copy] forKey:_DKSetterWithPROPERTYerty(@#PROPERTY)]; \
-} \
-@end
-
-#define __PASTE__(A,B) A##B
 
 typedef void(^testBlock)(NSNumber *);
+static NSTimeInterval const aniTime = 0.2;
 
-@interface ViewController ()<SearchViewControllerDelegate, UITextFieldDelegate>{
-    BOOL change;
-}
+@interface ViewController ()<UITextFieldDelegate, CAAnimationDelegate>
+
 @property (nonatomic, strong) LOTAnimationView *lottieView;
 @property (nonatomic,strong) ObserverModel *model;
 @property (nonatomic,strong) RACSignal *sign1;
@@ -106,6 +50,13 @@ typedef void(^testBlock)(NSNumber *);
 @property (nonatomic, strong) UITextField *field;
 @property (nonatomic, strong) UIView *header;
 @property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) UIButton *testButton;
+
+@property (nonatomic, strong) NSMutableArray *animatableConstraints;
+@property (nonatomic, strong) UIView *leftAnimationView;
+@property (nonatomic, strong) ReaSubModel1 *model1;
+@property (nonatomic, strong) CAShapeLayer *status;
+@property (nonatomic, assign) NSInteger rotationCount;
 
 @end
 
@@ -115,13 +66,11 @@ typedef void(^testBlock)(NSNumber *);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.rotationCount = 0;
     [self initUI];
-    
-    change = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    
     [super viewWillAppear:animated];
 }
 
@@ -130,40 +79,25 @@ typedef void(^testBlock)(NSNumber *);
 }
 
 - (void)initUI {
-    
-    self.view.backgroundColor = [UIColor lightGrayColor];
-
-    self.button = [[UIButton alloc] init];
-    [self.button setBackgroundColor:[UIColor colorWithRGB:0xffffff]];
-    NSAttributedString *attr =
-    [[NSAttributedString alloc] initWithString:@"确定"
-                                    attributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0x111111],
-                                                 NSFontAttributeName : [UIFont systemFontOfSize:15]
-                                                 }];
-    [self.button setAttributedTitle:attr forState:UIControlStateNormal];
-    
-    NSAttributedString *newAttr =
-    [[NSAttributedString alloc] initWithString:@"不确定"
-                                    attributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0x111111],
-                                                 NSFontAttributeName : [UIFont systemFontOfSize:15]
-                                                 }];
-    [self.button setAttributedTitle:newAttr forState:UIControlStateSelected];
-
-    [self.button addTarget:self action:@selector(tapEvent) forControlEvents:UIControlEventTouchUpInside];
+    self.view.backgroundColor = [UIColor colorWithRGB:0xffffff];
     [self.view addSubview:self.button];
-    
     [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
-        
         make.width.mas_equalTo(ScreenWidth);
         make.left.equalTo(self.view);
         make.bottom.equalTo(self.view);
         make.height.mas_equalTo(45 + kSafeAreaBottomPadding);
     }];
     
-    CustomizeTextField *field = [[CustomizeTextField alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 45)];
-    field.delegate = self;
-    [self.view addSubview:field];
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(0, -50)];
+    [path addArcWithCenter:CGPointMake(0, 0)
+                    radius:50
+                startAngle:-M_PI_2
+                  endAngle:M_PI_2 * 3
+                 clockwise:YES];
+    self.status.path = path.CGPath;
     
+    [self.view.layer addSublayer:self.status];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
@@ -176,15 +110,64 @@ typedef void(^testBlock)(NSNumber *);
 
 - (void)tapEvent {
     
+    UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    image.backgroundColor = [UIColor colorWithRGB:0xd2d2d2];
+    image.contentMode = UIViewContentModeLeft;
+    image.image = [UIImage imageNamed:@"icon_scene_step_success"];
+    [self.view addSubview:image];
     
 }
 
-- (void)shouldUpdateResultsController:(NSString *)keyword {
-    
-    NSLog(@"%@", keyword);
+- (void)stopCusAnimation {
+    [self.status removeAnimationForKey:@"C"];
+    self.status.contents = (id)[UIImage imageNamed:@"icon_scene_step_success"].CGImage;
+    self.status.contentsGravity = kCAGravityResizeAspect;
 }
 
-#pragma mark -
+#pragma mark - CAAnimation
+- (CAKeyframeAnimation *)colorChangeAni {
+    CAKeyframeAnimation *ani = [CAKeyframeAnimation animationWithKeyPath:@"fillColor"];
+    ani.values = @[(id)[UIColor colorWithRGB:0xcfab80].CGColor, (id)[UIColor colorWithRGB:0xffffff].CGColor];
+    ani.keyTimes = @[@0.5, @1];
+    ani.fillMode = kCAFillModeForwards;
+    ani.duration = aniTime;
+    ani.removedOnCompletion = NO;
+    ani.calculationMode = kCAAnimationPaced;
+    return ani;
+}
+
+- (CABasicAnimation *)strokeAni {
+    CABasicAnimation *ani = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    [ani setValue:@"myCircleStroken" forKey:@"animationKey"];
+    ani.fromValue = @1;
+    ani.toValue = @0.75;
+    ani.fillMode = kCAFillModeForwards;
+    ani.duration = aniTime;
+    ani.removedOnCompletion = NO;
+    ani.delegate = self;
+    return ani;
+}
+
+- (CABasicAnimation *)rotationAni {
+    CABasicAnimation *ani = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    [ani setValue:@"myCircleRotation" forKey:@"animationKey"];
+    ani.fromValue = @(0);
+    ani.toValue = @(M_PI * 2);
+    ani.fillMode = kCAFillModeForwards;
+    ani.duration = aniTime * 5;
+    ani.removedOnCompletion = NO;
+    ani.repeatCount = HUGE_VALF;
+    ani.delegate = self;
+    return ani;
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    if ([[anim valueForKey:@"animationKey"] isEqualToString:@"myCircleStroken"] && flag) {
+        [self.status addAnimation:[self rotationAni] forKey:@"C"];
+    }
+}
+
+#pragma mark - GETTER
 - (HMSegmentedControl *)segmentedControl {
     
     if (!_segmentedControl) {
@@ -203,17 +186,41 @@ typedef void(^testBlock)(NSNumber *);
     return _segmentedControl;
 }
 
-- (NSMutableAttributedString *)signUpAttribute {
-    
-    NSString *title = @"Sign up";
-    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:title];
-    
-    NSDictionary *underLine = @{NSUnderlineStyleAttributeName : [NSNumber numberWithInt:NSUnderlineStyleSingle]};
-    [attr addAttributes:underLine range:NSMakeRange(0, title.length - 1)];
-    
-    return attr;
+- (UIButton *)button {
+    if (!_button) {
+        _button = [[UIButton alloc] init];
+        [_button setBackgroundColor:[UIColor colorWithRGB:0x999999]];
+        NSAttributedString *attr =
+        [[NSAttributedString alloc] initWithString:@"确定"
+                                        attributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0x111111],
+                                                     NSFontAttributeName : [UIFont systemFontOfSize:15]
+                                                     }];
+        [_button setAttributedTitle:attr forState:UIControlStateNormal];
+        
+        NSAttributedString *newAttr =
+        [[NSAttributedString alloc] initWithString:@"不确定"
+                                        attributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0x111111],
+                                                     NSFontAttributeName : [UIFont systemFontOfSize:15]
+                                                     }];
+        [_button setAttributedTitle:newAttr forState:UIControlStateSelected];
+        
+        [_button addTarget:self action:@selector(tapEvent) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _button;
 }
 
+- (CAShapeLayer *)status {
+    if (!_status) {
+        _status = [CAShapeLayer layer];
+        _status.fillColor = [UIColor colorWithRGB:0xcfab80].CGColor;
+        _status.lineWidth = 1;
+        _status.strokeColor = [UIColor colorWithRGB:0xcfab80].CGColor;
+        [_status setPosition:CGPointMake(100, 100)];
+    }
+    return _status;
+}
+
+#pragma mark -
 - (CGPoint)getCenter:(UIView *)view {
     
     CGFloat x = view.bounds.size.width / 2;
@@ -322,6 +329,7 @@ typedef void(^testBlock)(NSNumber *);
     });
 }
 
+#pragma mark - Signal
 - (RACSignal *)deliverSecondSignal:(NSNumber *)firstNumber {
     
     RACSignal *sig = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {

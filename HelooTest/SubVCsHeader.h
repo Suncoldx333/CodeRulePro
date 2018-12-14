@@ -25,5 +25,6 @@
 #import "SearchViewController.h"
 #import "SearchMainViewController.h"
 #import "SearchResultViewController.h"
+#import "StatusAniamtionViewController.h"
 
 #endif /* SubVCsHeader_h */

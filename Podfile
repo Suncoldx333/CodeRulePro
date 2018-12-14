@@ -1,4 +1,8 @@
 # Uncomment the next line to define a global platform for your project
+
+source 'https://github.com/CocoaPods/Specs.git'
+source 'git@gitlab.broadlink.com.cn:iOS/BLSpecs.git'
+
  platform :ios, '8.0'
 
 target 'HelooTest' do
@@ -18,7 +22,7 @@ target 'HelooTest' do
   pod 'SDWebImage'
   pod 'IQKeyboardManager-Broadlink', :path => '../../IQKeyboardManager-Broadlink'
   pod 'JSONModel', '~> 1.8.0'
-  
+  pod 'JSONKit-BroadLink'
 end
 
 post_install do |installer|

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "477CE7F4B8A8651CCB978DE357223A42"
-               BlueprintName = "SVProgressHUD"
+               BlueprintIdentifier = "A008DDF45CC859305FCCE627EA90B666"
+               BlueprintName = "JSONKit-BroadLink"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libSVProgressHUD.a">
+               BuildableName = "libJSONKit-BroadLink.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
