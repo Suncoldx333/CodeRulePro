@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - BeeHive (1.6.0)
+  - BeeHive (1.8.0)
   - HMSegmentedControl (1.5.5)
   - IQKeyboardManager-Broadlink (0.1.0)
   - JSONKit-BroadLink (1.1.1)
@@ -43,9 +43,9 @@ PODS:
   - ReactiveCocoa/no-arc (2.5.2)
   - ReactiveCocoa/UI (2.5.2):
     - ReactiveCocoa/Core
-  - SDWebImage (4.4.2):
-    - SDWebImage/Core (= 4.4.2)
-  - SDWebImage/Core (4.4.2)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
   - SVProgressHUD (2.2.5)
   - Texture (2.6):
     - Texture/PINRemoteImage (= 2.6)
@@ -58,7 +58,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
-  - BeeHive (~> 1.6.0)
+  - BeeHive
   - HMSegmentedControl
   - IQKeyboardManager-Broadlink (from `../../IQKeyboardManager-Broadlink`)
   - JSONKit-BroadLink
@@ -73,10 +73,10 @@ DEPENDENCIES:
 
 SPEC REPOS:
   "git@gitlab.broadlink.com.cn:iOS/BLSpecs.git":
+    - BeeHive
     - JSONKit-BroadLink
   https://github.com/cocoapods/specs.git:
     - AFNetworking
-    - BeeHive
     - HMSegmentedControl
     - JSONModel
     - lottie-ios
@@ -103,7 +103,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  BeeHive: 64c01ddec33b9ef8813701e075eeb732327d0f75
+  BeeHive: dc08e8db61cef6565006073c986d16605a47f8c3
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   IQKeyboardManager-Broadlink: 8c1295b31f581cd5070e4e5f4033108e9b5c2cf2
   JSONKit-BroadLink: 6667442f42c1a6b70299c4f99d9ae0989335073c
@@ -114,11 +114,11 @@ SPEC CHECKSUMS:
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   ReactiveCocoa: 3ff25b1bd992ac79c5c79b26b6c0c1713b715bb2
-  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: b18fdb6195f6f9ea2da43da6c3c1f30beeb857ba
+PODFILE CHECKSUM: d46b6e023a1aca9db7a59690e14dbbcdfe5ca7e5
 
 COCOAPODS: 1.5.3

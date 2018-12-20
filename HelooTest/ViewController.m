@@ -98,6 +98,11 @@ static NSTimeInterval const aniTime = 0.2;
     self.status.path = path.CGPath;
     
     [self.view.layer addSublayer:self.status];
+    
+    self.header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    self.header.backgroundColor = [UIColor colorWithRGB:0x111111];
+    self.header.alpha = 0;
+    [self.view addSubview:self.header];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
@@ -110,12 +115,13 @@ static NSTimeInterval const aniTime = 0.2;
 
 - (void)tapEvent {
     
-    UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    image.backgroundColor = [UIColor colorWithRGB:0xd2d2d2];
-    image.contentMode = UIViewContentModeLeft;
-    image.image = [UIImage imageNamed:@"icon_scene_step_success"];
-    [self.view addSubview:image];
-    
+    [UIView animateWithDuration:2
+                     animations:^{
+                         self.header.alpha += 1;
+                     }
+                     completion:^(BOOL finished) {
+                         
+                     }];
 }
 
 - (void)stopCusAnimation {

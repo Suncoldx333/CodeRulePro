@@ -19,8 +19,8 @@
 
 typedef void (^BHNotificationResultHandler)(UIBackgroundFetchResult);
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 100000
-typedef void (^BHNotificationPresentationOptionsHandler)(UNNotificationPresentationOptions options);
-typedef void (^BHNotificationCompletionHandler)();
+typedef void (^BHNotificationPresentationOptionsHandler)(UNNotificationPresentationOptions options) NS_AVAILABLE_IOS(10_0);
+typedef void (^BHNotificationCompletionHandler)(void);
 #endif
 
 @interface BHNotificationsItem : NSObject
@@ -31,11 +31,11 @@ typedef void (^BHNotificationCompletionHandler)();
 @property (nonatomic, copy) BHNotificationResultHandler notificationResultHander;
 @property (nonatomic, strong) UILocalNotification *localNotification;
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 100000
-@property (nonatomic, strong) UNNotification *notification;
-@property (nonatomic, strong) UNNotificationResponse *notificationResponse;
-@property (nonatomic, copy) BHNotificationPresentationOptionsHandler notificationPresentationOptionsHandler;
+@property (nonatomic, strong) UNNotification *notification NS_AVAILABLE_IOS(10_0);
+@property (nonatomic, strong) UNNotificationResponse *notificationResponse NS_AVAILABLE_IOS(10_0);
+@property (nonatomic, copy) BHNotificationPresentationOptionsHandler notificationPresentationOptionsHandler NS_AVAILABLE_IOS(10_0); 
 @property (nonatomic, copy) BHNotificationCompletionHandler notificationCompletionHandler;
-@property (nonatomic, strong) UNUserNotificationCenter *center;
+@property (nonatomic, strong) UNUserNotificationCenter *center NS_AVAILABLE_IOS(10_0);
 #endif
 
 @end
@@ -53,10 +53,8 @@ typedef void (^BHShortcutCompletionHandler)(BOOL);
 
 @interface BHShortcutItem : NSObject
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED > 80400
-@property(nonatomic, strong) UIApplicationShortcutItem *shortcutItem;
+@property(nonatomic, strong) UIApplicationShortcutItem *shortcutItem NS_AVAILABLE_IOS(9_0);
 @property(nonatomic, copy) BHShortcutCompletionHandler scompletionHandler;
-#endif
 
 @end
 

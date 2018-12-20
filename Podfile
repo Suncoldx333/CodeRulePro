@@ -11,7 +11,7 @@ target 'HelooTest' do
 
   # Pods for HelooTest
   pod 'Toast', '~> 4.0.0'
-  pod 'BeeHive', '~> 1.6.0'
+  pod 'BeeHive'
   pod 'ReactiveCocoa', :git => 'https://github.com/zhao0/ReactiveCocoa.git', :tag => '2.5.2'
   pod 'HMSegmentedControl'
   pod 'lottie-ios', '~> 2.5.0'

@@ -1,1 +1,1 @@
-../../../BeeHive/BeeHive/BHCommon.h
+../../../BeeHive/BeeHive/Core/BHCommon.h

@@ -13,6 +13,12 @@
 #import "BHModuleManager.h"
 #import "BHServiceManager.h"
 
+#ifndef BLService
+#define BLService(__protocol__) \
+((id<__protocol__>)([[BeeHive shareInstance] createService:@protocol(__protocol__)]))
+#endif
+
+
 @interface BeeHive : NSObject
 
 //save application global context

@@ -1,1 +1,1 @@
-../../../BeeHive/BeeHive/BHServiceProtocol.h
+../../../BeeHive/BeeHive/Core/BHServiceProtocol.h

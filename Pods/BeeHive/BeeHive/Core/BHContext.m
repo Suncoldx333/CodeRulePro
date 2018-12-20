@@ -57,12 +57,14 @@
         self.moduleConfigName = @"BeeHive.bundle/BeeHive";
         self.serviceConfigName = @"BeeHive.bundle/BHService";
       
-#if __IPHONE_OS_VERSION_MAX_ALLOWED > 80400
-        self.touchShortcutItem = [BHShortcutItem new];
-#endif
+        if (@available(iOS 9.0, *)) {
+            self.touchShortcutItem = [BHShortcutItem new];
+        }
 
         self.openURLItem = [BHOpenURLItem new];
-        self.notificationsItem = [BHNotificationsItem new];
+        if (@available(iOS 10_0, *)) {
+            self.notificationsItem = [BHNotificationsItem new];
+        }
         self.userActivityItem = [BHUserActivityItem new];
     }
 

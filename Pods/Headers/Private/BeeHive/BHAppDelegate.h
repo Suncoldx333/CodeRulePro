@@ -1,1 +1,1 @@
-../../../BeeHive/BeeHive/BHAppDelegate.h
+../../../BeeHive/BeeHive/Core/BHAppDelegate.h

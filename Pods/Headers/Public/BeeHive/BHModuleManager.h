@@ -1,1 +1,1 @@
-../../../BeeHive/BeeHive/BHModuleManager.h
+../../../BeeHive/BeeHive/Core/BHModuleManager.h
