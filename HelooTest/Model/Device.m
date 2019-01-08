@@ -10,16 +10,25 @@
 
 @implementation Device
 
-- (void)tapEvent {
-    
-    NSString *hello = @"hello";
-    
-    NSMutableArray *sd = [NSMutableArray arrayWithCapacity:0];
-    [sd addObject:@1];
-    [sd addObject:@2];
-    
-    sd = [NSMutableArray arrayWithCapacity:0];
-    
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"deviceId" : @"deviceid",
+                                                                  @"deviceOrder" : @"deviceorder"
+                                                                  }];
+}
+
++ (BOOL)propertyIsIgnored:(NSString *)propertyName {
+    return [@[@"familyId", @"userLoginSession"] containsObject:propertyName];
+}
+
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
+
+- (instancetype)initWithDictionary:(NSDictionary *)dict error:(NSError *__autoreleasing *)err {
+    if (self = [super initWithDictionary:dict error:err]) {
+        self.userLoginSession = @"12313";
+    }
+    return self;
 }
 
 @end

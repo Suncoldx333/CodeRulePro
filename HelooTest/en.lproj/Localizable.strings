@@ -6,4 +6,4 @@
   Copyright © 2018年 ZhaoyunWang. All rights reserved.
 */
 "text" = "text";
-"common_account_signup_enter_vercode_send" = "enter veification code send to %s";
+"common_account_signup_enter_vercode_send" = "你被\"%1s\"移出\"%2s\"";

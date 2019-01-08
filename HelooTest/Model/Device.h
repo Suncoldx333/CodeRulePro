@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <JSONModel/JSONModel.h>
 
-@interface Device : NSObject
+@interface Device : JSONModel
 
 @property (nonatomic,copy) NSString *deviceId;
+@property (nonatomic,copy) NSString *deviceOrder;
+@property (nonatomic,copy) NSString *familyId;
+@property (nonatomic,copy) NSString *userId;
+@property (nonatomic,copy) NSString *userLoginSession;
 
 @end

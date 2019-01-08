@@ -114,14 +114,24 @@ static NSTimeInterval const aniTime = 0.2;
 }
 
 - (void)tapEvent {
+    NSString *title = [NSString localizedStringWithFormat:NSLocalizedString(@"bruaba", nil), @"你好", @"我好"];
+    NSLog(@"%@", title);
     
-    [UIView animateWithDuration:2
-                     animations:^{
-                         self.header.alpha += 1;
-                     }
-                     completion:^(BOOL finished) {
-                         
-                     }];
+    NSRange range1 = [title rangeOfString:@"你好"];
+    NSRange range2 = [title rangeOfString:@"我好"];
+    
+    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:title];
+    [attr addAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0xcfab80],
+                           }
+                  range:range1];
+    [attr addAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0xd2d2d2],
+                          }
+                  range:range2];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, ScreenWidth, 100)];
+    label.numberOfLines = 0;
+    label.attributedText = attr;
+    [self.view addSubview:label];
 }
 
 - (void)stopCusAnimation {
