@@ -627,11 +627,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HelooTest/Pods-HelooTest-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/BLPhoneFormat/BLPhoneFormat.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager-Broadlink/IQKeyboardManager-Broadlink.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BLPhoneFormat.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager-Broadlink.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);

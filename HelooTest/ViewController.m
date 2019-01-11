@@ -31,7 +31,7 @@
 #import "ThirdCodeHeader.h"
 #import "SubVCsHeader.h"
 #import "MacroHeader.h"
-
+#import <libPhoneNumber-iOS/NBPhoneNumberUtil.h>
 
 typedef void(^testBlock)(NSNumber *);
 static NSTimeInterval const aniTime = 0.2;
@@ -114,24 +114,18 @@ static NSTimeInterval const aniTime = 0.2;
 }
 
 - (void)tapEvent {
-    NSString *title = [NSString localizedStringWithFormat:NSLocalizedString(@"bruaba", nil), @"你好", @"我好"];
-    NSLog(@"%@", title);
-    
-    NSRange range1 = [title rangeOfString:@"你好"];
-    NSRange range2 = [title rangeOfString:@"我好"];
-    
-    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:title];
-    [attr addAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0xcfab80],
-                           }
-                  range:range1];
-    [attr addAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithRGB:0xd2d2d2],
-                          }
-                  range:range2];
-    
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, ScreenWidth, 100)];
-    label.numberOfLines = 0;
-    label.attributedText = attr;
-    [self.view addSubview:label];
+    NBPhoneNumberUtil *phoneUtil = [[NBPhoneNumberUtil alloc] init];
+    NSString *nationalNum = @"+86";
+    NSString *number1 = [phoneUtil getRegionCodeForCountryCode:@(86)];
+    NSError *error = nil;
+    NBPhoneNumber *number = [phoneUtil parse:@"1373221254"
+                               defaultRegion:@"CN"
+                                       error:&error];
+    if (error == nil) {
+        NSLog(@"isValidPhoneNumber ? [%@]", [phoneUtil isValidNumber:number] ? @"YES":@"NO");
+    } else {
+        NSLog(@"%@", error.localizedDescription);
+    }
 }
 
 - (void)stopCusAnimation {

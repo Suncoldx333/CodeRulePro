@@ -23,6 +23,8 @@ target 'HelooTest' do
   pod 'IQKeyboardManager-Broadlink', :path => '../../IQKeyboardManager-Broadlink'
   pod 'JSONModel', '~> 1.8.0'
   pod 'JSONKit-BroadLink'
+  pod 'BLPhoneFormat', '~> 0.3.3'
+  pod 'libPhoneNumber-iOS', '~> 0.8'
 end
 
 post_install do |installer|

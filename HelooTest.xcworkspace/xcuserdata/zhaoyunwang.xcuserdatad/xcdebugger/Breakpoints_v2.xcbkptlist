@@ -100,12 +100,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HelooTest/ViewController.m"
-            timestampString = "568361568.514835"
+            timestampString = "568802854.707049"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "117"
             endingLineNumber = "117"
             landmarkName = "-tapEvent"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/libPhoneNumber-iOS/libPhoneNumber/NBPhoneNumberUtil.m"
+            timestampString = "568802513.388556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "3040"
+            endingLineNumber = "3040"
+            landmarkName = "-maybeExtractCountryCode:metadata:nationalNumber:keepRawInput:phoneNumber:error:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

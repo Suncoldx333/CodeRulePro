@@ -15,10 +15,12 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - BeeHive (1.8.0)
+  - BLPhoneFormat (0.3.3)
   - HMSegmentedControl (1.5.5)
   - IQKeyboardManager-Broadlink (0.1.0)
   - JSONKit-BroadLink (1.1.1)
   - JSONModel (1.8.0)
+  - libPhoneNumber-iOS (0.9.13)
   - lottie-ios (2.5.2)
   - Masonry (1.1.0)
   - PINCache (3.0.1-beta.6):
@@ -59,10 +61,12 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - BeeHive
+  - BLPhoneFormat (~> 0.3.3)
   - HMSegmentedControl
   - IQKeyboardManager-Broadlink (from `../../IQKeyboardManager-Broadlink`)
   - JSONKit-BroadLink
   - JSONModel (~> 1.8.0)
+  - libPhoneNumber-iOS (~> 0.8)
   - lottie-ios (~> 2.5.0)
   - Masonry (~> 1.1.0)
   - ReactiveCocoa (from `https://github.com/zhao0/ReactiveCocoa.git`, tag `2.5.2`)
@@ -77,8 +81,10 @@ SPEC REPOS:
     - JSONKit-BroadLink
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - BLPhoneFormat
     - HMSegmentedControl
     - JSONModel
+    - libPhoneNumber-iOS
     - lottie-ios
     - Masonry
     - PINCache
@@ -104,10 +110,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   BeeHive: dc08e8db61cef6565006073c986d16605a47f8c3
+  BLPhoneFormat: cb1cad0532d90ce2c56ad1758628765e2018ca62
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   IQKeyboardManager-Broadlink: 8c1295b31f581cd5070e4e5f4033108e9b5c2cf2
   JSONKit-BroadLink: 6667442f42c1a6b70299c4f99d9ae0989335073c
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
+  libPhoneNumber-iOS: e444379ac18bbfbdefad571da735b2cd7e096caa
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
@@ -119,6 +127,6 @@ SPEC CHECKSUMS:
   Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: d46b6e023a1aca9db7a59690e14dbbcdfe5ca7e5
+PODFILE CHECKSUM: ed8c0889de3607f5e6c92713b9ab940e8444624c
 
 COCOAPODS: 1.5.3
