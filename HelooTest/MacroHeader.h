@@ -9,6 +9,9 @@
 #ifndef MacroHeader_h
 #define MacroHeader_h
 
+#define SCENE_EXECUTE_LOG_ENALBE 1
+
+
 #define createErrorWithDes(m) [NSError errorWithDomain:@"" code:4 userInfo:@{NSLocalizedDescriptionKey:m}]
 #define getRectNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
 
