@@ -271,12 +271,8 @@
 				1D263DD320B2CFF500BCA719 /* AppDelegate.m */,
 				1D263DD520B2CFF500BCA719 /* ViewController.h */,
 				1D263DD620B2CFF500BCA719 /* ViewController.m */,
-				1D3035B521AFBD1D00E8E392 /* ReaSubModel1.h */,
-				1D3035B621AFBD1D00E8E392 /* ReaSubModel1.m */,
 				1D9AF411219E6D510036BEE2 /* SubViews */,
-				1D21A576214B52460002560A /* SubVCsHeader.h */,
-				1DD4F7B421C0A36100CC3E01 /* MacroHeader.h */,
-				1DD4F7B321C0A2EA00CC3E01 /* ThirdCodeHeader.h */,
+				1D56B5C821FAAC1400E1D955 /* Headers */,
 				1DFD147720B502F400646678 /* VCS */,
 				1D263DD820B2CFF500BCA719 /* Main.storyboard */,
 				1D263DDB20B2CFF600BCA719 /* Assets.xcassets */,
@@ -291,6 +287,8 @@
 		1D263DE820B2D00B00BCA719 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1D3035B521AFBD1D00E8E392 /* ReaSubModel1.h */,
+				1D3035B621AFBD1D00E8E392 /* ReaSubModel1.m */,
 				1D602D97217861A000670510 /* ObjectWithProtocol.h */,
 				1D602D98217861A000670510 /* ObjectWithProtocol.m */,
 				1DFD147C20B693A600646678 /* StoryBgModel */,
@@ -326,6 +324,16 @@
 				1D415B4520DC8F4600D007C5 /* VarProtocol.h */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1D56B5C821FAAC1400E1D955 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				1D21A576214B52460002560A /* SubVCsHeader.h */,
+				1DD4F7B421C0A36100CC3E01 /* MacroHeader.h */,
+				1DD4F7B321C0A2EA00CC3E01 /* ThirdCodeHeader.h */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 		1D891B98215098A70025EFBF /* LoadingAnimation */ = {
