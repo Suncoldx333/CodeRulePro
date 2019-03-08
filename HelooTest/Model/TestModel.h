@@ -10,6 +10,7 @@
 
 @interface TestModel : JSONModel
 
-
+@property (nonatomic, copy) NSString *userId;
+@property (nonatomic, assign) BOOL bindState;
 
 @end

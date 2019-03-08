@@ -26,5 +26,6 @@
 #import "SearchMainViewController.h"
 #import "SearchResultViewController.h"
 #import "StatusAniamtionViewController.h"
+#import "RadarViewController.h"
 
 #endif /* SubVCsHeader_h */

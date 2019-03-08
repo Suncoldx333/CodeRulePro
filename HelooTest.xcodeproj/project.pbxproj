@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D081858216C47EE0085E16C /* LayerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D081857216C47EE0085E16C /* LayerLabel.m */; };
+		1D1525CD2202A52800B801A5 /* SudokuCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1525CC2202A52800B801A5 /* SudokuCalculator.m */; };
 		1D19B01420FDB93600017AB1 /* ModeChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19B01320FDB93600017AB1 /* ModeChange.m */; };
 		1D19B01720FDB97000017AB1 /* ModelNewChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19B01620FDB97000017AB1 /* ModelNewChange.m */; };
 		1D21A56321476B3D0002560A /* LoadingAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D21A56221476B3D0002560A /* LoadingAnimationVC.m */; };
@@ -40,6 +41,7 @@
 		1D891BB4215333FA0025EFBF /* TimePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BB3215333FA0025EFBF /* TimePickerVC.m */; };
 		1D891BBC215482D50025EFBF /* StarAniamitonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BBB215482D50025EFBF /* StarAniamitonViewController.m */; };
 		1D9AF414219E6D750036BEE2 /* CustomizeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9AF413219E6D750036BEE2 /* CustomizeTextField.m */; };
+		1D9FAC3B2232031E002E5CB5 /* RadarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FAC3A2232031E002E5CB5 /* RadarViewController.m */; };
 		1DAD4F2B20EC7E6300E96F3D /* CustonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD4F2A20EC7E6300E96F3D /* CustonVC.m */; };
 		1DAD4F2E20EC7EFA00E96F3D /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD4F2D20EC7EFA00E96F3D /* NextViewController.m */; };
 		1DBD70CB218ACCFE005E557F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBD70CA218ACCFE005E557F /* SearchViewController.m */; };
@@ -83,6 +85,8 @@
 		1D081856216C47EE0085E16C /* LayerLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerLabel.h; sourceTree = "<group>"; };
 		1D081857216C47EE0085E16C /* LayerLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerLabel.m; sourceTree = "<group>"; };
 		1D1234612123C17A008D97F8 /* ModelHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelHeaders.h; sourceTree = "<group>"; };
+		1D1525CB2202A52800B801A5 /* SudokuCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SudokuCalculator.h; sourceTree = "<group>"; };
+		1D1525CC2202A52800B801A5 /* SudokuCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SudokuCalculator.m; sourceTree = "<group>"; };
 		1D19B01220FDB93600017AB1 /* ModeChange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModeChange.h; sourceTree = "<group>"; };
 		1D19B01320FDB93600017AB1 /* ModeChange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModeChange.m; sourceTree = "<group>"; };
 		1D19B01520FDB97000017AB1 /* ModelNewChange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelNewChange.h; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 		1D891BBB215482D50025EFBF /* StarAniamitonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarAniamitonViewController.m; sourceTree = "<group>"; };
 		1D9AF412219E6D750036BEE2 /* CustomizeTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomizeTextField.h; sourceTree = "<group>"; };
 		1D9AF413219E6D750036BEE2 /* CustomizeTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomizeTextField.m; sourceTree = "<group>"; };
+		1D9FAC392232031E002E5CB5 /* RadarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadarViewController.h; sourceTree = "<group>"; };
+		1D9FAC3A2232031E002E5CB5 /* RadarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadarViewController.m; sourceTree = "<group>"; };
 		1DAC721421B7702300C644FF /* SearchHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchHeader.h; sourceTree = "<group>"; };
 		1DAD4F2920EC7E6300E96F3D /* CustonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustonVC.h; sourceTree = "<group>"; };
 		1DAD4F2A20EC7E6300E96F3D /* CustonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustonVC.m; sourceTree = "<group>"; };
@@ -271,6 +277,10 @@
 				1D263DD320B2CFF500BCA719 /* AppDelegate.m */,
 				1D263DD520B2CFF500BCA719 /* ViewController.h */,
 				1D263DD620B2CFF500BCA719 /* ViewController.m */,
+				1D9FAC392232031E002E5CB5 /* RadarViewController.h */,
+				1D9FAC3A2232031E002E5CB5 /* RadarViewController.m */,
+				1D1525CB2202A52800B801A5 /* SudokuCalculator.h */,
+				1D1525CC2202A52800B801A5 /* SudokuCalculator.m */,
 				1D9AF411219E6D510036BEE2 /* SubViews */,
 				1D56B5C821FAAC1400E1D955 /* Headers */,
 				1DFD147720B502F400646678 /* VCS */,
@@ -707,6 +717,7 @@
 				1DD4F7B221C0A2AD00CC3E01 /* StatusAniamtionViewController.m in Sources */,
 				1DD4CA47215DF44000B3D79D /* DoublePickerViewController.m in Sources */,
 				1D2687CB21425B130039E561 /* CustomizeSearchView.m in Sources */,
+				1D9FAC3B2232031E002E5CB5 /* RadarViewController.m in Sources */,
 				1DD4C9FF215B2AA600B3D79D /* TimeRepeatConfigureViewController.m in Sources */,
 				1DBD70CF218AE652005E557F /* SearchMainViewController.m in Sources */,
 				1DD4C9F52159DEB500B3D79D /* TouchCustomizeView.m in Sources */,
@@ -729,6 +740,7 @@
 				1D21A56621478EEC0002560A /* LoadingAnimationLayer.m in Sources */,
 				1D65EDC02193E17900681843 /* TestModel.m in Sources */,
 				1DAD4F2B20EC7E6300E96F3D /* CustonVC.m in Sources */,
+				1D1525CD2202A52800B801A5 /* SudokuCalculator.m in Sources */,
 				1DD4CA50215F160600B3D79D /* TextureTimePickerNode.m in Sources */,
 				1DFEDEE420B3B22D00E06130 /* Family.m in Sources */,
 				1D263DE220B2CFF600BCA719 /* main.m in Sources */,
@@ -890,7 +902,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 24Y8GAPRT7;
+				DEVELOPMENT_TEAM = 5YQ85Q9UV8;
 				GCC_PREFIX_HEADER = /Users/zhaoyunwang/Desktop/jobe/CodeRule/PrefixHeader.pch;
 				INFOPLIST_FILE = HelooTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -910,7 +922,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 24Y8GAPRT7;
+				DEVELOPMENT_TEAM = 5YQ85Q9UV8;
 				GCC_PREFIX_HEADER = /Users/zhaoyunwang/Desktop/jobe/CodeRule/PrefixHeader.pch;
 				INFOPLIST_FILE = HelooTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

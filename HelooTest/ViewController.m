@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 #import "SubVCsHeader.h"
-
+#import "TestModel.h"
 
 
 #import "OriginModel.h"
@@ -114,18 +114,8 @@ static NSTimeInterval const aniTime = 0.2;
 }
 
 - (void)tapEvent {
-    NBPhoneNumberUtil *phoneUtil = [[NBPhoneNumberUtil alloc] init];
-    NSString *nationalNum = @"+86";
-    NSString *number1 = [phoneUtil getRegionCodeForCountryCode:@(86)];
-    NSError *error = nil;
-    NBPhoneNumber *number = [phoneUtil parse:@"1373221254"
-                               defaultRegion:@"CN"
-                                       error:&error];
-    if (error == nil) {
-        NSLog(@"isValidPhoneNumber ? [%@]", [phoneUtil isValidNumber:number] ? @"YES":@"NO");
-    } else {
-        NSLog(@"%@", error.localizedDescription);
-    }
+    RadarViewController *vc = [[RadarViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)stopCusAnimation {
