@@ -16,7 +16,6 @@ target 'HelooTest' do
   pod 'HMSegmentedControl'
   pod 'lottie-ios', '~> 2.5.0'
   pod 'AFNetworking', '~> 3.2.1'
-  pod 'SVProgressHUD', '~> 2.2.5'
   pod 'Masonry', '~> 1.1.0'
   pod 'Texture', '~> 2.6'
   pod 'SDWebImage'
@@ -25,7 +24,8 @@ target 'HelooTest' do
   pod 'JSONKit-BroadLink'
   pod 'BLPhoneFormat', '~> 0.3.3'
   pod 'libPhoneNumber-iOS', '~> 0.8'
-  
+  pod 'SVProgressHUD', :path => '../../SVProgressHUD'
+
 end
 
 post_install do |installer|

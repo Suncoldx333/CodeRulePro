@@ -35,6 +35,8 @@
 		1D65EDC02193E17900681843 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D65EDBF2193E17900681843 /* TestModel.m */; };
 		1D77DCF921A646480002705C /* UICollectionViewLeftAlignFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D77DCF821A646480002705C /* UICollectionViewLeftAlignFlowLayout.m */; };
 		1D77DCFE21A687270002705C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D77DD0021A687270002705C /* Localizable.strings */; };
+		1D83A7902244E3FD00F500C7 /* MecsoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D83A78F2244E3FD00F500C7 /* MecsoViewController.m */; };
+		1D83A7932244E41E00F500C7 /* BlalssdlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D83A7922244E41E00F500C7 /* BlalssdlViewController.m */; };
 		1D891B9B215098F80025EFBF /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891B9A215098F80025EFBF /* ChartViewController.m */; };
 		1D891B9F21509A390025EFBF /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891B9E21509A390025EFBF /* ChartView.m */; };
 		1D891BA221509EA40025EFBF /* ChartDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D891BA121509EA40025EFBF /* ChartDetailView.m */; };
@@ -63,6 +65,10 @@
 		1DD4CA4D215F15E000B3D79D /* TextureTimePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4CA4C215F15E000B3D79D /* TextureTimePickerViewController.m */; };
 		1DD4CA50215F160600B3D79D /* TextureTimePickerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4CA4F215F160600B3D79D /* TextureTimePickerNode.m */; };
 		1DD4F7B221C0A2AD00CC3E01 /* StatusAniamtionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4F7B121C0A2AD00CC3E01 /* StatusAniamtionViewController.m */; };
+		1DD51678225DD4FD00A6C368 /* devicehot.html in Resources */ = {isa = PBXBuildFile; fileRef = 1DD51677225DD4FD00A6C368 /* devicehot.html */; };
+		1DD5167D225DD75100A6C368 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 1DD5167A225DD75100A6C368 /* index.html */; };
+		1DD5167E225DD75100A6C368 /* app.css in Resources */ = {isa = PBXBuildFile; fileRef = 1DD5167B225DD75100A6C368 /* app.css */; };
+		1DD5167F225DD75100A6C368 /* rootFont.js in Resources */ = {isa = PBXBuildFile; fileRef = 1DD5167C225DD75100A6C368 /* rootFont.js */; };
 		1DE90F8E216AF5F100D74DCB /* ImageInLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE90F8D216AF5F100D74DCB /* ImageInLayerViewController.m */; };
 		1DFC77AC20BB9BF600F356F1 /* HowSwitchWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC77AB20BB9BF600F356F1 /* HowSwitchWork.m */; };
 		1DFC77AE20BB9C2B00F356F1 /* HelloSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC77AD20BB9C2B00F356F1 /* HelloSwitch.m */; };
@@ -141,6 +147,10 @@
 		1D77DCFF21A687270002705C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1D77DD0121A6872A0002705C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1D8119EF20E096BE0045CDAA /* WhyNoImportModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhyNoImportModel.h; sourceTree = "<group>"; };
+		1D83A78E2244E3FD00F500C7 /* MecsoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MecsoViewController.h; sourceTree = "<group>"; };
+		1D83A78F2244E3FD00F500C7 /* MecsoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MecsoViewController.m; sourceTree = "<group>"; };
+		1D83A7912244E41E00F500C7 /* BlalssdlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlalssdlViewController.h; sourceTree = "<group>"; };
+		1D83A7922244E41E00F500C7 /* BlalssdlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlalssdlViewController.m; sourceTree = "<group>"; };
 		1D891B99215098F80025EFBF /* ChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
 		1D891B9A215098F80025EFBF /* ChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
 		1D891B9D21509A390025EFBF /* ChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
@@ -202,6 +212,10 @@
 		1DD4F7B121C0A2AD00CC3E01 /* StatusAniamtionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusAniamtionViewController.m; sourceTree = "<group>"; };
 		1DD4F7B321C0A2EA00CC3E01 /* ThirdCodeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdCodeHeader.h; sourceTree = "<group>"; };
 		1DD4F7B421C0A36100CC3E01 /* MacroHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroHeader.h; sourceTree = "<group>"; };
+		1DD51677225DD4FD00A6C368 /* devicehot.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = devicehot.html; sourceTree = "<group>"; };
+		1DD5167A225DD75100A6C368 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		1DD5167B225DD75100A6C368 /* app.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = app.css; sourceTree = "<group>"; };
+		1DD5167C225DD75100A6C368 /* rootFont.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rootFont.js; sourceTree = "<group>"; };
 		1DE90F8C216AF5F100D74DCB /* ImageInLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageInLayerViewController.h; sourceTree = "<group>"; };
 		1DE90F8D216AF5F100D74DCB /* ImageInLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageInLayerViewController.m; sourceTree = "<group>"; };
 		1DFC77AA20BB9BF600F356F1 /* HowSwitchWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HowSwitchWork.h; sourceTree = "<group>"; };
@@ -267,6 +281,8 @@
 		1D263DD120B2CFF500BCA719 /* HelooTest */ = {
 			isa = PBXGroup;
 			children = (
+				1DD51679225DD75100A6C368 /* dist */,
+				1DD51677225DD4FD00A6C368 /* devicehot.html */,
 				1D3FFEE8211D802900124D87 /* data.json */,
 				1D3FFEEA211D816200124D87 /* LottieLogo1.json */,
 				1D415B4320DC8EE500D007C5 /* Protocol */,
@@ -281,6 +297,10 @@
 				1D9FAC3A2232031E002E5CB5 /* RadarViewController.m */,
 				1D1525CB2202A52800B801A5 /* SudokuCalculator.h */,
 				1D1525CC2202A52800B801A5 /* SudokuCalculator.m */,
+				1D83A78E2244E3FD00F500C7 /* MecsoViewController.h */,
+				1D83A78F2244E3FD00F500C7 /* MecsoViewController.m */,
+				1D83A7912244E41E00F500C7 /* BlalssdlViewController.h */,
+				1D83A7922244E41E00F500C7 /* BlalssdlViewController.m */,
 				1D9AF411219E6D510036BEE2 /* SubViews */,
 				1D56B5C821FAAC1400E1D955 /* Headers */,
 				1DFD147720B502F400646678 /* VCS */,
@@ -457,6 +477,16 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		1DD51679225DD75100A6C368 /* dist */ = {
+			isa = PBXGroup;
+			children = (
+				1DD5167A225DD75100A6C368 /* index.html */,
+				1DD5167B225DD75100A6C368 /* app.css */,
+				1DD5167C225DD75100A6C368 /* rootFont.js */,
+			);
+			path = dist;
+			sourceTree = "<group>";
+		};
 		1DFC77BD20BBD7B000F356F1 /* mFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,9 +657,13 @@
 			files = (
 				1D263DDF20B2CFF600BCA719 /* LaunchScreen.storyboard in Resources */,
 				1D3FFEEB211D816200124D87 /* LottieLogo1.json in Resources */,
+				1DD5167F225DD75100A6C368 /* rootFont.js in Resources */,
 				1D263DDC20B2CFF600BCA719 /* Assets.xcassets in Resources */,
+				1DD5167D225DD75100A6C368 /* index.html in Resources */,
 				1D77DCFE21A687270002705C /* Localizable.strings in Resources */,
+				1DD51678225DD4FD00A6C368 /* devicehot.html in Resources */,
 				1D415B4E20DCF05B00D007C5 /* VCwithXIB.xib in Resources */,
+				1DD5167E225DD75100A6C368 /* app.css in Resources */,
 				1D3FFEE9211D802900124D87 /* data.json in Resources */,
 				1D263DDA20B2CFF500BCA719 /* Main.storyboard in Resources */,
 			);
@@ -647,7 +681,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HelooTest/Pods-HelooTest-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/BLPhoneFormat/BLPhoneFormat.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager-Broadlink/IQKeyboardManager-Broadlink.bundle",
-				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+				"${PODS_ROOT}/../../../SVProgressHUD/SVProgressHUD/Classes/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -723,6 +757,7 @@
 				1DD4C9F52159DEB500B3D79D /* TouchCustomizeView.m in Sources */,
 				1D19B01420FDB93600017AB1 /* ModeChange.m in Sources */,
 				1DFD147B20B5580400646678 /* ObserverModel.m in Sources */,
+				1D83A7902244E3FD00F500C7 /* MecsoViewController.m in Sources */,
 				1DE90F8E216AF5F100D74DCB /* ImageInLayerViewController.m in Sources */,
 				1DD4CA02215B2B2100B3D79D /* TimePickerSubviews.m in Sources */,
 				1D891B9F21509A390025EFBF /* ChartView.m in Sources */,
@@ -735,6 +770,7 @@
 				1DFD147F20B693FB00646678 /* Emperor.m in Sources */,
 				1DFEDEED20B3E96B00E06130 /* SecondSubViewController.m in Sources */,
 				1D77DCF921A646480002705C /* UICollectionViewLeftAlignFlowLayout.m in Sources */,
+				1D83A7932244E41E00F500C7 /* BlalssdlViewController.m in Sources */,
 				1DC3478A213D0CD900C29EF6 /* TestCollectionViewVC.m in Sources */,
 				1DFEDEDE20B3B1C400E06130 /* Device.m in Sources */,
 				1D21A56621478EEC0002560A /* LoadingAnimationLayer.m in Sources */,

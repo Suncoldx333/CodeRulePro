@@ -48,7 +48,7 @@ PODS:
   - SDWebImage (4.4.3):
     - SDWebImage/Core (= 4.4.3)
   - SDWebImage/Core (4.4.3)
-  - SVProgressHUD (2.2.5)
+  - SVProgressHUD (1.0.2)
   - Texture (2.6):
     - Texture/PINRemoteImage (= 2.6)
   - Texture/Core (2.6)
@@ -71,7 +71,7 @@ DEPENDENCIES:
   - Masonry (~> 1.1.0)
   - ReactiveCocoa (from `https://github.com/zhao0/ReactiveCocoa.git`, tag `2.5.2`)
   - SDWebImage
-  - SVProgressHUD (~> 2.2.5)
+  - SVProgressHUD (from `../../SVProgressHUD`)
   - Texture (~> 2.6)
   - Toast (~> 4.0.0)
 
@@ -91,7 +91,6 @@ SPEC REPOS:
     - PINOperation
     - PINRemoteImage
     - SDWebImage
-    - SVProgressHUD
     - Texture
     - Toast
 
@@ -101,6 +100,8 @@ EXTERNAL SOURCES:
   ReactiveCocoa:
     :git: https://github.com/zhao0/ReactiveCocoa.git
     :tag: 2.5.2
+  SVProgressHUD:
+    :path: "../../SVProgressHUD"
 
 CHECKOUT OPTIONS:
   ReactiveCocoa:
@@ -123,10 +124,10 @@ SPEC CHECKSUMS:
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   ReactiveCocoa: 3ff25b1bd992ac79c5c79b26b6c0c1713b715bb2
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SVProgressHUD: 378b466bd70afcdcb49af4db8e816d9539b65f28
   Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 9271ecf78325fbe37ee10609cfefbd5bf17d4fa0
+PODFILE CHECKSUM: 49e2e1222d1751564ae0a543559d653d6b77d4f1
 
 COCOAPODS: 1.5.3
