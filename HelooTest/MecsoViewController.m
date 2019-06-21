@@ -38,7 +38,7 @@
     self.tableView.editing = YES;
     
     NSNumber *ids = [UserDefaults objectForKey:kSayHello];
-    
+    NSLog(@"2131313");
 }
 
 //- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
