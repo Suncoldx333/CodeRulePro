@@ -1,0 +1,1 @@
+var STRINGS = {"cat_name": "SP插座","dev_name": "SP插座","error": {"cmd": "Execute command error","device_offline": "Device is offline","sdk": "SDK init failed"},"intfs": {"pwr": {"name": "ON/OFF","values": {"0": "OFF","1": "ON"}}},"vendor_name": "BroadLink"};

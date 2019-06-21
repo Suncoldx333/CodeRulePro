@@ -2,6 +2,7 @@
 
 source 'https://github.com/CocoaPods/Specs.git'
 source 'git@gitlab.broadlink.com.cn:iOS/BLSpecs.git'
+source 'https://github.com/ibroadlink/BLLibSpecs.git'
 
  platform :ios, '8.0'
 
@@ -13,7 +14,9 @@ target 'HelooTest' do
   pod 'Toast', '~> 4.0.0'
   pod 'BeeHive'
   pod 'ReactiveCocoa', :git => 'https://github.com/zhao0/ReactiveCocoa.git', :tag => '2.5.2'
-  pod 'HMSegmentedControl'
+#  pod 'HMSegmentedControl-BroadLink', :git => 'git@gitlab.broadlink.com.cn:iOS/HMSegmentedControl-BroadLink.git', :tag => '0.2.0'
+  pod 'HMSegmentedControl-BroadLink', :path => '../../HMSegmentedControl-BroadLink'
+
   pod 'lottie-ios', '~> 2.5.0'
   pod 'AFNetworking', '~> 3.2.1'
   pod 'Masonry', '~> 1.1.0'
@@ -25,7 +28,7 @@ target 'HelooTest' do
   pod 'BLPhoneFormat', '~> 0.3.3'
   pod 'libPhoneNumber-iOS', '~> 0.8'
   pod 'SVProgressHUD', :path => '../../SVProgressHUD'
-
+  
 end
 
 post_install do |installer|

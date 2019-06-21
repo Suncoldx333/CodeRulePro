@@ -1,0 +1,22 @@
+{
+  "name": "HMSegmentedControl-BroadLink",
+  "version": "0.1.1",
+  "summary": "customize HMSegmentedControl for BroadLink.",
+  "description": "customize HMSegmentedControl for BroadLink. change calculation of sectionIndicator's frame",
+  "homepage": "http://gitlab.broadlink.com.cn/iOS/HMSegmentedControl-BroadLink",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Suncoldx333": "zhaoyun.wang@broadlink.com.cn"
+  },
+  "source": {
+    "git": "git@gitlab.broadlink.com.cn:iOS/HMSegmentedControl-BroadLink.git",
+    "tag": "0.1.1"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HMSegmentedControl-BroadLink/Classes/**/*"
+}

@@ -29,6 +29,7 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlSelectionIndicatorLocation) {
 typedef NS_ENUM(NSInteger, HMSegmentedControlSegmentWidthStyle) {
     HMSegmentedControlSegmentWidthStyleFixed, // Segment width is fixed
     HMSegmentedControlSegmentWidthStyleDynamic, // Segment width will only be as big as the text width (including inset)
+    HMSegmentedControlSegmentWidthStyleCustom,
 };
 
 typedef NS_OPTIONS(NSInteger, HMSegmentedControlBorderType) {
@@ -62,6 +63,11 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlImagePosition) {
 @property (nonatomic, strong) NSArray<NSString *> *sectionTitles;
 @property (nonatomic, strong) NSArray<UIImage *> *sectionImages;
 @property (nonatomic, strong) NSArray<UIImage *> *sectionSelectedImages;
+
+/**
+ custom, default 20
+ */
+@property (nonatomic, assign) CGFloat segmentIndicatorWidth;
 
 /**
  Provide a block to be executed when selected index is changed.

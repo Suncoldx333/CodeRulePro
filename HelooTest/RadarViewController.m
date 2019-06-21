@@ -12,6 +12,13 @@
 #import <Masonry/Masonry.h>
 #import "MecsoViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <AFNetworking/AFNetworking.h>
+#import "UIImage+Cut.h"
+#import "UIDevice+Mach.h"
+
+#import <SDWebImage/SDWebImageManager.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "ParentObject.h"
 
 static CGFloat const kCorpusRadius = 27;
 
@@ -29,23 +36,32 @@ static CGFloat const kCorpusRadius = 27;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRGB:0xffffff];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(200, 200, 72, 72)];
+    button.layer.borderWidth = 0.5;
+    button.layer.borderColor = [UIColor colorWithRGB:0x007ffb].CGColor;
+    [self.view addSubview:button];
+    [button addTarget:self action:@selector(buttonEvent) forControlEvents:UIControlEventTouchUpInside];
     
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel"
-                                                                 style:UIBarButtonItemStylePlain
-                                                                target:self
-                                                                action:@selector(cancenlEvent:)];
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    indicator.userInteractionEnabled = NO;
+    indicator.center = CGPointMake(button.bounds.size.width / 2, button.bounds.size.height / 2);
+    [button addSubview:indicator];
+    [indicator startAnimating];
+    
+//    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navigation_icon_back_black"]
+//                                                                 style:UIBarButtonItemStylePlain
+//                                                                target:self
+//                                                                action:@selector(cancenlEvent:)];
 //    leftItem.tintColor = [UIColor colorWithRGB:0x666666];
-    self.navigationItem.leftBarButtonItem = leftItem;
-    
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+//
     self.title = @"Radar";
     
-    self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:self.webView];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
-    NSString *htmlString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    NSString *basePath = [[NSBundle mainBundle] bundlePath];
-    NSURL *baseURL = [NSURL fileURLWithPath:basePath];
-    [self.webView loadHTMLString:htmlString baseURL:baseURL];
+//    self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+//    NSString *htmlFilePath = [[NSBundle mainBundle] pathForResource:@"getData" ofType:@"html"];
+//    NSURL *url = [NSURL fileURLWithPath:htmlFilePath];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//    [self.webView loadRequest:request];
 }
 
 - (void)cancenlEvent:(UIBarButtonItem *)sender {
@@ -106,8 +122,7 @@ static CGFloat const kCorpusRadius = 27;
 }
 
 - (void)buttonEvent {
-    [self.view endEditing:YES];
-    [SVProgressHUD show];
+    NSLog(@"123131");
 }
 
 
@@ -154,14 +169,59 @@ static CGFloat const kCorpusRadius = 27;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self testMerge];
-//    [self.processView setProgress:1 animated:YES];
-//    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1
-//                                                  target:self
-//                                                selector:@selector(timeCount)
-//                                                userInfo:nil
-//                                                 repeats:YES];
+    MecsoViewController *vc = [[MecsoViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
+
+- (void)h5PrivateData:(NSDictionary *)dic {
+    BOOL success = NO;
+    if (![dic isKindOfClass:[NSDictionary class]]) {
+        return;
+    }
+    NSString *action = [dic objectForKey:@"action"];
+    NSString *fileName = [dic objectForKey:@"fileName"];
+    NSString *fileData = [dic objectForKey:@"fileData"];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString * path = [NSString stringWithFormat:@"%@/%@",documentsDirectory,fileName];
+    
+    if ([action isEqualToString:@"r"]) {
+        if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+            NSData *localData = [NSData dataWithContentsOfFile:path];
+            NSString *content = [[NSString alloc] initWithData:localData encoding:NSUTF8StringEncoding];
+            success = YES;
+            fileData = content;
+        } else {
+            success = NO;
+            fileData = @"";
+        }
+    } else if ([action isEqualToString:@"w"]) {
+        if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+            NSError *error;
+            success = [fileData writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
+            fileData = @"";
+        } else {
+            BOOL create = [[NSFileManager defaultManager] createFileAtPath:path contents:nil attributes:nil];
+            if (create) {
+                NSError *error;
+                success = [fileData writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
+                fileData = @"";
+            } else {
+                success = NO;
+                fileData = @"";
+            }
+        }
+    }
+}
+
+- (void)uploadImage {
+    NSString *code = @"1212386";
+    NSString *final = [NSString stringWithFormat:@"%.4d", code.intValue];
+    NSLog(@"%@", final);
+}
+
+
 
 - (UIProgressView *)processView {
     if (!_processView) {

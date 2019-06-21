@@ -14,7 +14,7 @@
 
 #import <objc/runtime.h>
 #import <Toast.h>
-#import <HMSegmentedControl/HMSegmentedControl.h>
+#import <HMSegmentedControl-BroadLink/HMSegmentedControl.h>
 #import <lottie-ios/Lottie/Lottie.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <AFNetworking/AFNetworking.h>

@@ -16,7 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - BeeHive (1.8.0)
   - BLPhoneFormat (0.3.3)
-  - HMSegmentedControl (1.5.5)
+  - HMSegmentedControl-BroadLink (0.1.1)
   - IQKeyboardManager-Broadlink (0.1.0)
   - JSONKit-BroadLink (1.1.1)
   - JSONModel (1.8.0)
@@ -48,7 +48,7 @@ PODS:
   - SDWebImage (4.4.3):
     - SDWebImage/Core (= 4.4.3)
   - SDWebImage/Core (4.4.3)
-  - SVProgressHUD (1.0.2)
+  - SVProgressHUD (1.0.3)
   - Texture (2.6):
     - Texture/PINRemoteImage (= 2.6)
   - Texture/Core (2.6)
@@ -62,7 +62,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - BeeHive
   - BLPhoneFormat (~> 0.3.3)
-  - HMSegmentedControl
+  - HMSegmentedControl-BroadLink (from `../../HMSegmentedControl-BroadLink`)
   - IQKeyboardManager-Broadlink (from `../../IQKeyboardManager-Broadlink`)
   - JSONKit-BroadLink
   - JSONModel (~> 1.8.0)
@@ -82,7 +82,6 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - BLPhoneFormat
-    - HMSegmentedControl
     - JSONModel
     - libPhoneNumber-iOS
     - lottie-ios
@@ -95,6 +94,8 @@ SPEC REPOS:
     - Toast
 
 EXTERNAL SOURCES:
+  HMSegmentedControl-BroadLink:
+    :path: "../../HMSegmentedControl-BroadLink"
   IQKeyboardManager-Broadlink:
     :path: "../../IQKeyboardManager-Broadlink"
   ReactiveCocoa:
@@ -112,7 +113,7 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   BeeHive: dc08e8db61cef6565006073c986d16605a47f8c3
   BLPhoneFormat: cb1cad0532d90ce2c56ad1758628765e2018ca62
-  HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
+  HMSegmentedControl-BroadLink: 701873bbfe026eee9b4569c0c9647e7e6fdb328b
   IQKeyboardManager-Broadlink: 8c1295b31f581cd5070e4e5f4033108e9b5c2cf2
   JSONKit-BroadLink: 6667442f42c1a6b70299c4f99d9ae0989335073c
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
@@ -124,10 +125,10 @@ SPEC CHECKSUMS:
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   ReactiveCocoa: 3ff25b1bd992ac79c5c79b26b6c0c1713b715bb2
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
-  SVProgressHUD: 378b466bd70afcdcb49af4db8e816d9539b65f28
+  SVProgressHUD: 40a5cefd809a862f7d7455e2fe0c47156c72b5b9
   Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 49e2e1222d1751564ae0a543559d653d6b77d4f1
+PODFILE CHECKSUM: 314b736e417f5a72662b888c417a02b6d26711fd
 
 COCOAPODS: 1.5.3

@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BlalssdlViewController;
+@protocol BlalssdlViewControllerDelegate <NSObject>
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface BlalssdlViewController : UIViewController
+- (void)sayHello;
 
 @end
 
-NS_ASSUME_NONNULL_END
+@interface BlalssdlViewController : UIViewController
+
+@property (nonatomic, weak) id<BlalssdlViewControllerDelegate> delegate;
+
+@end

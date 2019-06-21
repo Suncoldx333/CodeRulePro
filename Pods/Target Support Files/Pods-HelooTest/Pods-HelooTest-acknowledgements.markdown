@@ -393,13 +393,9 @@ library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.
 
 
-## HMSegmentedControl
+## HMSegmentedControl-BroadLink
 
-# License
-
-## MIT License
-
-Copyright (c) 2012 Hesham Abd-Elmegid (http://www.hesh.am)
+Copyright (c) 2018 Suncoldx333 <zhaoyun.wang@broadlink.com.cn>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -418,6 +414,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
 
 ## IQKeyboardManager-Broadlink
 

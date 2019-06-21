@@ -1,6 +1,6 @@
 {
   "name": "SVProgressHUD",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "summary": "SVProgressHUD is a view tools",
   "description": "SVProgressHUD is mainly used for network loading waiting prompts and error display prompts",
   "homepage": "http://gitlab.broadlink.com.cn/iOS/SVProgressHUD",
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "git@gitlab.broadlink.com.cn:iOS/SVProgressHUD.git",
-    "tag": "1.0.2"
+    "tag": "1.0.3"
   },
   "source_files": [
     "SVProgressHUD/Classes",

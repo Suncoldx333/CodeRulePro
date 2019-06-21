@@ -21,7 +21,13 @@
     // Do any additional setup after loading the view.
 }
 
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self dismissViewControllerAnimated:YES completion:^{
+        if ([self.delegate respondsToSelector:@selector(sayHello)]) {
+            [self.delegate sayHello];
+        }
+    }];
+}
 
 /*
 #pragma mark - Navigation
