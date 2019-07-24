@@ -174,7 +174,7 @@ static CGFloat const kCorpusRadius = 27;
 }
 
 - (void)h5PrivateData:(NSDictionary *)dic {
-    NSLog(@"other");
+    
     BOOL success = NO;
     if (![dic isKindOfClass:[NSDictionary class]]) {
         return;
